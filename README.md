@@ -33,7 +33,17 @@ El sistema Android proporciona cientos de subclases de vista predefinidas. Las s
 
 Se puede definir una *View* para que aparezca en la pantalla y responder a un gesto de usuario. También se puede definir una *View* para aceptar la introducción de texto o para que sea invisible hasta que sea necesario.
 
-A su vez, se puede especificar Ver elementos en archivos de recursos de diseño. Los recursos de diseño se escriben en XML y se enumeran dentro de la carpeta de diseño en la carpeta res en el panel Proyecto> Android.
+A su vez, se puede especificar Ver elementos en archivos de recursos de diseño. Los recursos de diseño se escriben en XML y se encuentran en la carpeta **layout** dentro de la carpeta **res** en el panel **Project> Android.**
 
+##### Grupos ViewGroup
 
+Los elementos *View* se pueden agrupar dentro de un [ViewGroup](https://developer.android.com/reference/android/view/ViewGroup.html), que actúa como un contenedor. La relación es padre-hijo, en la que el padre es un *ViewGroup* y el hijo es una vista u otro grupo de vistas. Los siguientes son grupos de ViewGroup comúnmente usados:
+
+    ConstraintLayout: grupo que coloca los elementos de la IU (elementos de la vista secundaria) mediante el uso de conexiones restringidas a otros elementos y a los bordes del diseño (vista principal).
+    ScrollView: un grupo que contiene otro elemento de vista secundario y habilita el desplazamiento del elemento de vista secundario.
+    RecyclerView: un grupo que contiene una lista de otros elementos de View o grupos de ViewGroup y permite desplazarlos agregando y eliminando elementos de View dinámicamente de la pantalla.
+
+Layout ViewGroup groups
+
+Los elementos de vista para una pantalla están organizados en una jerarquía. En la raíz de esta jerarquía se encuentra un ViewGroup que contiene el diseño de toda la pantalla. ViewGroup puede contener elementos de vista secundarios u otros grupos de ViewGroup como se muestra en la siguiente figura.
 #### <a id="editor"></a> Editor de diseño
