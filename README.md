@@ -51,15 +51,18 @@ Los elementos de vista para una pantalla están organizados en una jerarquía. E
 
 En la figura de arriba:
 
-  1 El *ViewGroup* raíz.
-  2 El primer conjunto de elementos de vista secundarios y *ViewGroup* cuyo padre es la raíz.
+1. El *ViewGroup* raíz.
+2. El primer conjunto de elementos *View* secundarios y *ViewGroup* cuyo padre es la raíz.
 
-Algunos grupos de ViewGroup se designan como diseños porque organizan elementos de vista secundarios de una manera específica y se utilizan normalmente como el ViewGroup raíz. Algunos ejemplos de diseños son:
+Algunos grupos de *ViewGroup* se designan como layouts porque organizan elementos *View* secundarios de una manera específica y se utilizan normalmente como el *ViewGroup* raíz. Algunos ejemplos de diseños son:
 
-    ConstraintLayout: un grupo de elementos secundarios Ver elementos que utilizan restricciones, bordes y pautas para controlar cómo se colocan los elementos en relación con otros elementos en el diseño. ConstraintLayout fue diseñado para que sea fácil hacer clic y arrastrar Ver elementos en el editor de diseño.
-    LinearLayout: un grupo de elementos secundarios Ver y posicionar horizontalmente o verticalmente.
-    RelativeLayout: un grupo de elementos secundarios de View en el que cada elemento está posicionado y alineado con respecto a otros elementos dentro del ViewGroup. En otras palabras, las posiciones de los elementos de vista secundarios pueden describirse entre sí o con el grupo de vista principal.
-    TableLayout: un grupo de elementos de vista secundarios organizados en filas y columnas.
-    FrameLayout: un grupo de elementos secundarios de vista en una pila. FrameLayout está diseñado para bloquear un área en la pantalla para mostrar una vista. Los elementos de Vista infantil se dibujan en una pila, con el niño agregado más recientemente en la parte superior. El tamaño del FrameLayout es el tamaño de su elemento de vista hijo más grande.
-    GridLayout: grupo que coloca sus elementos de vista secundarios en una cuadrícula rectangular que se puede desplazar.
+  * [ConstraintLayout](http://tools.android.com/tech-docs/layout-editor): un grupo de elementos secundarios *View* elementos que utilizan restricciones, bordes y pautas para controlar cómo se colocan los elementos en relación con otros elementos en el diseño. ConstraintLayout fue diseñado para que sea fácil hacer clic y arrastrar elementos *View* en el editor de diseño.
+  * [LinearLayout](https://developer.android.com/reference/android/widget/LinearLayout.html): un grupo de elementos secundarios de clase *View* y que se posicionan horizontalmente o verticalmente.
+  * [RelativeLayout](https://developer.android.com/reference/android/widget/RelativeLayout.html): un grupo de elementos secundarios de clase *View* en el que cada elemento está posicionado y alineado con respecto a otros elementos dentro del *ViewGroup*. En otras palabras, las posiciones de los elementos de vista secundarios pueden describirse entre sí o con el grupo de vista principal.
+  * [TableLayout](https://developer.android.com/reference/android/widget/TableLayout.html): un grupo de elementos de vista secundarios organizados en filas y columnas.
+  * [FrameLayout](https://developer.android.com/reference/android/widget/FrameLayout.html): un grupo de elementos secundarios de tipo *View* en una pila. FrameLayout está diseñado para bloquear un área en la pantalla para mostrar una vista. Los elementos de hijos de clase *View* se dibujan en una pila, con el hijo agregado más recientemente en la parte superior. El tamaño del FrameLayout es el tamaño de su elemento hijo *View* más grande.
+  *[GridLayout](https://developer.android.com/reference/android/widget/GridLayout.html): grupo que coloca sus elementos *View* secundarios en una cuadrícula rectangular que se puede desplazar.
+  
+  ![Diferentes tipos de layouts](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/dg_common_layouts_visual_rep.png)
+    
 #### <a id="editor"></a> Editor de diseño
