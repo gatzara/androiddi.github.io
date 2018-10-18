@@ -26,12 +26,12 @@ El sistema Android proporciona cientos de subclases de vista predefinidas. Las s
 
   * [TextView](http://developer.android.com/reference/android/widget/TextView.html) para mostrar texto
   * [EditText](http://developer.android.com/reference/android/widget/EditText.html) para permitir al usuario introducir y editar texto
-  * [Botón](http://developer.android.com/reference/android/widget/Button.html) y otros elementos seleccionables (como RadioButton, CheckBox y Spinner) para ofrecer un comportamiento interactivo
-  * ScrollView y RecyclerView para mostrar elementos desplazables
-  * ImageView para mostrar imágenes
-  * ConstraintLayout, RelativeLayout y LinearLayout para contener otras vistas y colocarlas
+  * [Botón](http://developer.android.com/reference/android/widget/Button.html) y otros elementos seleccionables (como [RadioButton](http://developer.android.com/reference/android/widget/RadioButton.html), [CheckBox](http://developer.android.com/reference/android/widget/CheckBox.html) y [Spinner](http://developer.android.com/reference/android/widget/Spinner.html)) para ofrecer un comportamiento interactivo
+  * [ScrollView](http://developer.android.com/reference/android/widget/ScrollView.html) y [RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html) para mostrar elementos desplazables
+  * [ImageView](http://developer.android.com/reference/android/widget/ImageView.html) para mostrar imágenes
+  * [ConstraintLayout](https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html), [RelativeLayout](https://developer.android.com/reference/android/widget/RelativeLayout.html) y [LinearLayout](https://developer.android.com/reference/android/widget/LinearLayout.html) para contener otras vistas y colocarlas
 
-Se puede definir una vista para que aparezca en la pantalla y responder a un gesto de usuario. También se puede definir una vista para aceptar la introducción de texto o para que sea invisible hasta que sea necesario.
+Se puede definir una *View* para que aparezca en la pantalla y responder a un gesto de usuario. También se puede definir una *View* para aceptar la introducción de texto o para que sea invisible hasta que sea necesario.
 
 A su vez, se puede especificar Ver elementos en archivos de recursos de diseño. Los recursos de diseño se escriben en XML y se enumeran dentro de la carpeta de diseño en la carpeta res en el panel Proyecto> Android.
 
