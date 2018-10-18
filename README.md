@@ -46,6 +46,20 @@ Los elementos *View* se pueden agrupar dentro de un [ViewGroup](https://develope
 ##### Distribución de los grupos ViewGroup
 
 Los elementos de vista para una pantalla están organizados en una jerarquía. En la raíz de esta jerarquía se encuentra un *ViewGroup* que contiene el diseño de toda la pantalla. *ViewGroup* puede contener elementos de vista secundarios u otros grupos de tipo *ViewGroup* como se muestra en la siguiente figura:
+
 ![Jerarquía ViewGroup](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/dg_viewgroup_hierarchy.png)
 
+En la figura de arriba:
+
+  1 El *ViewGroup* raíz.
+  2 El primer conjunto de elementos de vista secundarios y *ViewGroup* cuyo padre es la raíz.
+
+Algunos grupos de ViewGroup se designan como diseños porque organizan elementos de vista secundarios de una manera específica y se utilizan normalmente como el ViewGroup raíz. Algunos ejemplos de diseños son:
+
+    ConstraintLayout: un grupo de elementos secundarios Ver elementos que utilizan restricciones, bordes y pautas para controlar cómo se colocan los elementos en relación con otros elementos en el diseño. ConstraintLayout fue diseñado para que sea fácil hacer clic y arrastrar Ver elementos en el editor de diseño.
+    LinearLayout: un grupo de elementos secundarios Ver y posicionar horizontalmente o verticalmente.
+    RelativeLayout: un grupo de elementos secundarios de View en el que cada elemento está posicionado y alineado con respecto a otros elementos dentro del ViewGroup. En otras palabras, las posiciones de los elementos de vista secundarios pueden describirse entre sí o con el grupo de vista principal.
+    TableLayout: un grupo de elementos de vista secundarios organizados en filas y columnas.
+    FrameLayout: un grupo de elementos secundarios de vista en una pila. FrameLayout está diseñado para bloquear un área en la pantalla para mostrar una vista. Los elementos de Vista infantil se dibujan en una pila, con el niño agregado más recientemente en la parte superior. El tamaño del FrameLayout es el tamaño de su elemento de vista hijo más grande.
+    GridLayout: grupo que coloca sus elementos de vista secundarios en una cuadrícula rectangular que se puede desplazar.
 #### <a id="editor"></a> Editor de diseño
