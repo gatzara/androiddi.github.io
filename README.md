@@ -148,7 +148,12 @@ En los paneles de planos o de diseño, los siguientes controladores aparecen en 
   
   ![Control de restricción](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/handles.png)
   
+  * **Control de redimensionamiento**: Se pueden arrastrar los controles cuadrados de tamaño para cambiar el tamaño del elemento. Mientras se arrastra, el controlador cambia a una esquina en ángulo.
   
+    ![Control de redimensionamiento](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/handle_resize.png)
+  
+Se pueden arrastrar los controladores de cambio de tamaño en cada esquina del elemento de la interfaz de usuario para cambiar el tamaño, pero al hacerlo se deben codificar las dimensiones de anchura y altura, lo que se debería evitar para la mayoría de los elementos porque las dimensiones codificadas no se adaptan a diferentes densidades de pantalla.
+
 #### <a id="editando"></a> Editando el archivo XML directamente
 #### <a id="archivos"></a> Archivos de recursos
 #### <a id="respondiendo"></a> Respondiendo a los gestos
