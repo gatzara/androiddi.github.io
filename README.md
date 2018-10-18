@@ -2,12 +2,21 @@
 Apartat d'Android en el mòdul de DI de DAM
 
 ## Construyendo la primera app
+##Title
+
+###Place 1
+
+Hello, this is some text to fill in this, [here](#place-2), is a link to the second place.
+
+###Place 2
+
+Place one has the fun times of linking here, but I can also link back [here](#place-1).
 
 ### Layouts y recursos para la interfaz de usuario
 
 Contenido:
-* [Puntos de vista](https://github.com/gatzara/androiddi.github.io/blob/master/README.md#puntos)
-* [El editor de diseño](https://github.com/gatzara/androiddi.github.io/blob/master/README.md#editor)
+* [Puntos de vista](#puntos)
+* [El editor de diseño](#editor)
 * Editando XML directamente
 * Archivos de recursos
 * Respondiendo a ver clics
