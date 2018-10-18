@@ -114,6 +114,41 @@ La figura de arriba muestra la barra de herramientas superior del editor de layo
 
 El editor de diseño también ofrece una segunda barra de herramientas que le permite configurar la apariencia de los elementos de la interfaz de usuario en un *ConstraintLayout* y acercar y alejar la vista previa:
 
+![Barra de herramienta secundaria de diseño de layout](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/as_constraint_toolbar2_annot.png)
+
+La figura de arriba muestra la barra de herramientas de edición ConstraintLayout:
+
+1. **Mostrar**: seleccione **Mostrar restricciones** y **Mostrar márgenes** para mostrarlos en la vista previa o para dejar de mostrarlos.
+2. **Conectar automáticamente**: habilite o inhabilite la conexión automática. Con **Autoconnect** habilitado, puede arrastrar cualquier elemento (como un botón) a cualquier parte de un diseño para generar restricciones dentro del diseño principal.
+3. **Borrar todas las restricciones**: Borre todas las restricciones en todo el diseño.
+4. **Inferir restricciones**: crear restricciones por inferencia.
+5. **Márgenes predeterminados**: establece los márgenes predeterminados.
+6. **Pack**: Empaquetar o expandir los elementos seleccionados.
+7. **Alinear**: alinear los elementos seleccionados.
+8. **Pautas**: Añadir pautas verticales u horizontales.
+9. **Controles de zoom**: acercar o alejar.
+
+##### Usando el ConstraintLayout
+El editor de diseño ofrece más funciones en la pestaña **Diseño** cuando usa *ConstraintLayout*, incluidos los controles para definir restricciones.
+
+Una restricción es una conexión o alineación con otro elemento de la interfaz de usuario, con el diseño principal o con una directriz invisible. Cada restricción aparece como una línea que se extiende desde un controlador circular. Después de seleccionar un elemento de la interfaz de usuario en el panel **Árbol de componentes** o hacer clic en él en el editor de diseño, el elemento muestra un controlador de cambio de tamaño en cada esquina y un control de restricción circular en el centro de cada lado.
+
+![Restricciones en el ConstraintLayout](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/as_layout_constraint_2_handles_annot.png)
+
+La figura anterior muestra los controles de restricción y cambio de tamaño en los elementos de vista en un diseño:
+
+1. **Cambiar el tamaño de la selección.**
+2. **Línea de restricción y elemento seleccionado**. En la figura, la restricción alinea el lado izquierdo del botón Toast con el lado izquierdo del diseño.
+3. **Control de restricción sin una línea de restricción**.
+4. **Línea de base del elemento seleccionado**. El controlador de línea base alinea la línea base de texto de un elemento con la línea base de texto de otro elemento.
+
+En los paneles de planos o de diseño, los siguientes controladores aparecen en el elemento TextView:
+
+  * **Control de restricción**: para crear una restricción, haga clic en el control de restricción, que se muestra como un círculo en cada lado de un elemento. Luego arrastre el círculo a otro controlador de restricción o a un límite principal. Una línea en zigzag representa la restricción.
+  
+  ![Control de restricción](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/handles.png)
+  
+  
 #### <a id="editando"></a> Editando el archivo XML directamente
 #### <a id="archivos"></a> Archivos de recursos
 #### <a id="respondiendo"></a> Respondiendo a los gestos
