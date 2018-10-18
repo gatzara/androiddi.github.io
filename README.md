@@ -10,9 +10,9 @@ Contenido:
 * [El editor de diseño](#editor)
 * [Editando XML directamente](#editando)
 * [Archivos de recursos](#archivos)
-* Respondiendo a los gestos
-* Practicas relacionadas
-* Aprende más
+* [Respondiendo a los gestos](#respondiendo)
+* [Practicas relacionadas](#practicas)
+* [Aprende más](#aprende)
 
 Este capítulo describe el diseño de la interfaz de usuario (UI) de la pantalla y otros recursos que crea para la aplicación, y el código que usaría para responder a la interacción de un elemento de UI de un usuario.
 
@@ -89,6 +89,13 @@ El editor de diseño muestra una representación visual de código XML. Puede ar
 Para usar el editor de diseño, haga doble clic en el archivo de diseño XML (activity_main.xml). El editor de diseño aparece con la pestaña Diseño en la parte inferior resaltada. (Si la pestaña Texto está resaltada y se ve el código XML, haga clic en la pestaña Diseño). Para la plantilla Actividad vacía, el diseño es como se muestra en la siguiente figura.
 
 ![Editor de diseño](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/as_activity_main_in_project_pane_annot.png)
+
+1. Fichero de diseño XML (activity_main.xml).
+     Diseño y pestañas de texto. Haga clic en Diseño para ver el editor de diseño o Texto para ver el código XML.
+     Panel de la paleta. El panel Paleta proporciona una lista de elementos y diseños de la interfaz de usuario. Agregue un elemento o diseño a la interfaz de usuario arrastrándolo al panel de diseño.
+     Árbol de componentes. El panel Árbol de componentes muestra la jerarquía de diseño. Haga clic en un elemento Ver o Grupo de vista en este panel para seleccionarlo. Los elementos de vista se organizan en una jerarquía de árbol de padres e hijos, en la que un hijo hereda los atributos de su padre. En la figura anterior, TextView es un elemento secundario de ConstraintLayout.
+     Paneles de diseño y planos. Arrastre los elementos de la vista desde el panel Paleta al panel de diseño o plano para colocarlos en el diseño. En la figura de arriba, el diseño muestra solo un elemento: un TextView que muestra "Hello World".
+     Atributos de la pestaña. Haga clic en Atributos para mostrar el panel Atributos para configurar atributos para un elemento de Vista.
 
 #### <a id="editando"></a> Editando el archivo XML directamente
 #### <a id="archivos"></a> Archivos de recursos
