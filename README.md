@@ -37,11 +37,11 @@ A su vez, se puede especificar Ver elementos en archivos de recursos de diseño.
 
 ##### Grupos ViewGroup
 
-Los elementos *View* se pueden agrupar dentro de un [ViewGroup](https://developer.android.com/reference/android/view/ViewGroup.html), que actúa como un contenedor. La relación es padre-hijo, en la que el padre es un *ViewGroup* y el hijo es una vista u otro grupo de vistas. Los siguientes son grupos de ViewGroup comúnmente usados:
+Los elementos *View* se pueden agrupar dentro de un [ViewGroup](https://developer.android.com/reference/android/view/ViewGroup.html), que actúa como un contenedor. La relación es padre-hijo, en la que el padre es un *ViewGroup* y el hijo es una vista u otro *ViewGroup*. Los siguientes son grupos de ViewGroup comúnmente usados:
 
-    ConstraintLayout: grupo que coloca los elementos de la IU (elementos de la vista secundaria) mediante el uso de conexiones restringidas a otros elementos y a los bordes del diseño (vista principal).
-    ScrollView: un grupo que contiene otro elemento de vista secundario y habilita el desplazamiento del elemento de vista secundario.
-    RecyclerView: un grupo que contiene una lista de otros elementos de View o grupos de ViewGroup y permite desplazarlos agregando y eliminando elementos de View dinámicamente de la pantalla.
+  * [ConstraintLayout](https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html): grupo que coloca los elementos de la IU (elementos de la vista secundaria) mediante el uso de conexiones restringidas a otros elementos y a los bordes del diseño (vista principal).
+  * [ScrollView](https://developer.android.com/reference/android/widget/ScrollView.html): un grupo que contiene otro elemento de vista secundario y habilita el desplazamiento del elemento de vista secundario.
+  * [RecyclerView](https://developer.android.com/reference/android/widget/RecyclerView.html): un grupo que contiene una lista de otros elementos de View o grupos de ViewGroup y permite desplazarlos agregando y eliminando elementos de View dinámicamente de la pantalla.
 
 Layout ViewGroup groups
 
