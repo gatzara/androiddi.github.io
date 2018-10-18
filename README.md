@@ -6,8 +6,8 @@ Apartat d'Android en el mòdul de DI de DAM
 ### Layouts y recursos para la interfaz de usuario
 
 Contenido:
-* [Puntos de vista](https://github.com/gatzara/androiddi.github.io/edit/master/README.md#puntos)
-* [El editor de diseño](https://github.com/gatzara/androiddi.github.io/edit/master/README.md#editor)
+* [Puntos de vista](https://github.com/gatzara/androiddi.github.io/blob/master/README.md#puntos)
+* [El editor de diseño](https://github.com/gatzara/androiddi.github.io/blob/master/README.md#editor)
 * Editando XML directamente
 * Archivos de recursos
 * Respondiendo a ver clics
