@@ -10,7 +10,7 @@ Contenido:
 * [El editor de diseño](#editor)
 * Editando XML directamente
 * Archivos de recursos
-* Respondiendo a ver clics
+* Respondiendo a los gestos
 * Practicas relacionadas
 * Aprende más
 
@@ -68,5 +68,21 @@ Algunos grupos de *ViewGroup* se designan como layouts porque organizan elemento
  A continuación se muestra un ejemplo simple de un elemento *LinearLayout* con elementos secundarios *View* especificados en el fichero de diseño (activity_main.xml), junto con un diagrama jerárquico y una captura de pantalla del diseño final real 
  
  ![Vista del LinearLayout](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/dg_layout_diagram_and_hierarchy.png)
+ 
+ En la figura de arriba:
+
+ 1. LinearLayout, el grupo de vista raíz, contiene todos los elementos de vista secundarios en una orientación vertical.
+ 2. Botón (button_toast). El primer elemento secundario de Vista aparece en la parte superior en LinearLayout.
+ 3. TextView (show_count). El segundo elemento secundario de vista aparece debajo del primer elemento secundario de vista en LinearLayout.
+ 4. Botón (button_count). El tercer elemento de vista secundario aparece debajo del segundo elemento de vista secundario en LinearLayout.
+
+La jerarquía de diseño puede volverse compleja para una aplicación que muestra muchos elementos de Vista en una pantalla. Es importante entender la jerarquía, ya que afecta si los elementos de Vista son visibles y cuán eficientemente se dibujan.
+
+Sugerencia: Puede explorar la jerarquía de diseño de su aplicación utilizando el [Hierarchy Viewer](https://developer.android.com/studio/profile/hierarchy-viewer-walkthru.html). Muestra una vista de árbol de la jerarquía y permite analizar el rendimiento de los elementos de vista en un dispositivo con Android. Los problemas de rendimiento se tratan posteriormente.
     
 #### <a id="editor"></a> Editor de diseño
+#### <a id="editando"></a> Editando el archivo XML directamente
+#### <a id="archivos"></a> Archivos de recursos
+#### <a id="respondiendo"></a> Respondiendo a los gestos
+#### <a id="practicas"></a> Prácticas relacionadas
+#### <a id="aprende"></a> Aprende más
