@@ -8,8 +8,8 @@ Apartat d'Android en el mòdul de DI de DAM
 Contenido:
 * [Puntos de vista](#puntos)
 * [El editor de diseño](#editor)
-* Editando XML directamente
-* Archivos de recursos
+* [Editando XML directamente](#editando)
+* [Archivos de recursos](#archivos)
 * Respondiendo a los gestos
 * Practicas relacionadas
 * Aprende más
@@ -81,6 +81,15 @@ La jerarquía de diseño puede volverse compleja para una aplicación que muestr
 Sugerencia: Puede explorar la jerarquía de diseño de su aplicación utilizando el [Hierarchy Viewer](https://developer.android.com/studio/profile/hierarchy-viewer-walkthru.html). Muestra una vista de árbol de la jerarquía y permite analizar el rendimiento de los elementos de vista en un dispositivo con Android. Los problemas de rendimiento se tratan posteriormente.
     
 #### <a id="editor"></a> Editor de diseño
+
+Se definen los layouts en el editor de diseños, o directamente introduciendo el código XML.
+
+El editor de diseño muestra una representación visual de código XML. Puede arrastrar los elementos de clase *View* al panel de diseño y organizar, redimensionar y especificar atributos para ellos. Inmediatamente se ve el efecto de los cambios que se realizan.
+
+Para usar el editor de diseño, haga doble clic en el archivo de diseño XML (activity_main.xml). El editor de diseño aparece con la pestaña Diseño en la parte inferior resaltada. (Si la pestaña Texto está resaltada y se ve el código XML, haga clic en la pestaña Diseño). Para la plantilla Actividad vacía, el diseño es como se muestra en la siguiente figura.
+
+![Editor de diseño](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/as_activity_main_in_project_pane_annot.png)
+
 #### <a id="editando"></a> Editando el archivo XML directamente
 #### <a id="archivos"></a> Archivos de recursos
 #### <a id="respondiendo"></a> Respondiendo a los gestos
