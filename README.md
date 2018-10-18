@@ -90,12 +90,29 @@ Para usar el editor de diseño, haga doble clic en el archivo de diseño XML (ac
 
 ![Editor de diseño](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/as_activity_main_in_project_pane_annot.png)
 
-1. Fichero de diseño XML (activity_main.xml).
-     Diseño y pestañas de texto. Haga clic en Diseño para ver el editor de diseño o Texto para ver el código XML.
-     Panel de la paleta. El panel Paleta proporciona una lista de elementos y diseños de la interfaz de usuario. Agregue un elemento o diseño a la interfaz de usuario arrastrándolo al panel de diseño.
-     Árbol de componentes. El panel Árbol de componentes muestra la jerarquía de diseño. Haga clic en un elemento Ver o Grupo de vista en este panel para seleccionarlo. Los elementos de vista se organizan en una jerarquía de árbol de padres e hijos, en la que un hijo hereda los atributos de su padre. En la figura anterior, TextView es un elemento secundario de ConstraintLayout.
-     Paneles de diseño y planos. Arrastre los elementos de la vista desde el panel Paleta al panel de diseño o plano para colocarlos en el diseño. En la figura de arriba, el diseño muestra solo un elemento: un TextView que muestra "Hello World".
-     Atributos de la pestaña. Haga clic en Atributos para mostrar el panel Atributos para configurar atributos para un elemento de Vista.
+1. Fichero de diseño XML (**activity_main.xml**).
+2. Pestañas de **diseño** y de **texto**. Haga clic en Diseño para ver el editor de diseño o Texto para ver el código XML.
+3. Panel de la **paleta**. El panel Paleta proporciona una lista de elementos y diseños de la interfaz de usuario. Agregue un elemento o diseño a la interfaz de usuario arrastrándolo al panel de diseño.
+4. **Árbol de componentes**. El panel Árbol de componentes muestra la jerarquía de diseño. Haga clic en un elemento *View* o *ViewGroup* en este panel para seleccionarlo. Los elementos *View* se organizan en una jerarquía de árbol de padres e hijos, en la que un hijo hereda los atributos de su padre. En la figura anterior, *TextView* es un elemento secundario de *ConstraintLayout*.
+5. Paneles de diseño y planos. Arrastre los elementos *View* desde el panel Paleta al panel de diseño o plano para colocarlos en el layout. En la figura de arriba, el diseño muestra solo un elemento: un *TextView* que muestra "Hello World".
+6. Pestaña de **Atributos**. Haga clic en Atributos para mostrar el panel Atributos para configurar atributos para un elemento *Vista*.
+
+##### Barras de herramientas del editor de layout
+
+Las barras de herramientas del editor de layout proporcionan botones para configurar su diseño y cambiar su apariencia. La barra de herramientas superior le permite configurar la apariencia de la vista previa del diseño en el editor de diseño:
+
+![Barra de herramientas del editor de layout](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/as_constraint_toolbar1_annot.png)
+
+La figura de arriba muestra la barra de herramientas superior del editor de layout:
+
+1. Seleccionar **superficie de layout**: seleccione **Diseño** para mostrar una vista previa en color de los elementos de la interfaz de usuario en su diseño, o **Plano** para mostrar solo los contornos de los elementos. Para ver ambos paneles, de lado a lado, seleccione **Diseño + Plano**.
+2. **Orientación en el Editor**: seleccione **Vertical** u **Horizontal** para mostrar la vista previa en una orientación vertical u horizontal. La configuración de orientación permite previsualizar las orientaciones de diseño sin ejecutar la aplicación en un emulador o dispositivo. Para crear diseños alternativos, seleccione **Crear variación apaisada** u otras variaciones.
+3. **Dispositivo en el Editor**: seleccione el tipo de dispositivo (teléfono/tablet, Android TV o Android Wear).
+4. **Versión de la API en el Editor**: seleccione la versión de Android que se usará para mostrar la vista previa.
+5. **Tema en el Editor**: seleccione un tema (como **AppTheme**) para aplicar a la vista previa.
+6. **Configuración regional en Editor**: seleccione el idioma y la configuración regional para la vista previa. Esta lista muestra solo los idiomas disponibles en los recursos de cadena (consulte la lección sobre localización para obtener detalles sobre cómo agregar idiomas). También puede seleccionar **Vista previa de derecha a izquierda** para ver el diseño como si se hubiera elegido un idioma RTL.
+
+El editor de diseño también ofrece una segunda barra de herramientas que le permite configurar la apariencia de los elementos de la interfaz de usuario en un *ConstraintLayout* y acercar y alejar la vista previa:
 
 #### <a id="editando"></a> Editando el archivo XML directamente
 #### <a id="archivos"></a> Archivos de recursos
