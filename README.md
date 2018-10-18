@@ -61,8 +61,12 @@ Algunos grupos de *ViewGroup* se designan como layouts porque organizan elemento
   * [RelativeLayout](https://developer.android.com/reference/android/widget/RelativeLayout.html): un grupo de elementos secundarios de clase *View* en el que cada elemento está posicionado y alineado con respecto a otros elementos dentro del *ViewGroup*. En otras palabras, las posiciones de los elementos de vista secundarios pueden describirse entre sí o con el grupo de vista principal.
   * [TableLayout](https://developer.android.com/reference/android/widget/TableLayout.html): un grupo de elementos de vista secundarios organizados en filas y columnas.
   * [FrameLayout](https://developer.android.com/reference/android/widget/FrameLayout.html): un grupo de elementos secundarios de tipo *View* en una pila. FrameLayout está diseñado para bloquear un área en la pantalla para mostrar una vista. Los elementos de hijos de clase *View* se dibujan en una pila, con el hijo agregado más recientemente en la parte superior. El tamaño del FrameLayout es el tamaño de su elemento hijo *View* más grande.
-  *[GridLayout](https://developer.android.com/reference/android/widget/GridLayout.html): grupo que coloca sus elementos *View* secundarios en una cuadrícula rectangular que se puede desplazar.
+  * [GridLayout](https://developer.android.com/reference/android/widget/GridLayout.html): grupo que coloca sus elementos *View* secundarios en una cuadrícula rectangular que se puede desplazar.
   
   ![Diferentes tipos de layouts](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/dg_common_layouts_visual_rep.png)
+  
+ A continuación se muestra un ejemplo simple de un elemento *LinearLayout* con elementos secundarios *View* especificados en el fichero de diseño (activity_main.xml), junto con un diagrama jerárquico y una captura de pantalla del diseño final real 
+ 
+ ![Vista del LinearLayout](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/dg_layout_diagram_and_hierarchy.png)
     
 #### <a id="editor"></a> Editor de diseño
