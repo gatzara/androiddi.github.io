@@ -154,6 +154,16 @@ En los paneles de planos o de diseño, los siguientes controladores aparecen en 
   
 Se pueden arrastrar los controladores de cambio de tamaño en cada esquina del elemento de la interfaz de usuario para cambiar el tamaño, pero al hacerlo se deben codificar las dimensiones de anchura y altura, lo que se debería evitar para la mayoría de los elementos porque las dimensiones codificadas no se adaptan a diferentes densidades de pantalla.
 
+##### Creando restricciones a un elemento de la interfaz gráfica
+
+Para agregar una restricción a un elemento de la interfaz de usuario, haga clic en el controlador circular y arrastre una línea a otro elemento o a un lado del layout, como se muestra en las dos figuras animadas a continuación. Para eliminar una restricción de un elemento, haga clic en el controlador circular.
+
+![Creando restricciones usando ConstraintLayout](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/hello_world_textview_constraints.gif)
+
+![Creando restricciones entre elementos usando ConstraintLayout](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/hello_toast7_drag_buttons_constrain.gif%20Constrain%20the%20two%20Button%20elements)
+
+Las restricciones que se definen en el editor de diseño se crean como atributos XML, que se pueden ver en la pestaña **Texto** como se describe en "Editar XML directamente" en este capítulo. Por ejemplo, el siguiente código XML se crea restringiendo la parte superior de un elemento a la parte superior de su padre:
+
 #### <a id="editando"></a> Editando el archivo XML directamente
 #### <a id="archivos"></a> Archivos de recursos
 #### <a id="respondiendo"></a> Respondiendo a los gestos
