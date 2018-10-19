@@ -160,9 +160,11 @@ Para agregar una restricción a un elemento de la interfaz de usuario, haga clic
 
 ![Creando restricciones usando ConstraintLayout](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/hello_world_textview_constraints.gif)
 
-![Creando restricciones entre elementos usando ConstraintLayout](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/hello_toast7_drag_buttons_constrain.gif%20Constrain%20the%20two%20Button%20elements)
+![Más restricciones](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/hello_toast7_drag_buttons_constrain.gif%20Constrain%20the%20two%20Button%20elements)
 
 Las restricciones que se definen en el editor de diseño se crean como atributos XML, que se pueden ver en la pestaña **Texto** como se describe en "Editar XML directamente" en este capítulo. Por ejemplo, el siguiente código XML se crea restringiendo la parte superior de un elemento a la parte superior de su padre:
+
+> app:layout_constraintTop_toTopOf="parent"
 
 #### <a id="editando"></a> Editando el archivo XML directamente
 #### <a id="archivos"></a> Archivos de recursos
