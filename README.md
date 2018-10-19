@@ -204,15 +204,15 @@ A veces es más rápido y más fácil editar el código XML directamente, especi
 
 Para ver y editar el código XML, abra el archivo de diseño XML. El editor de diseño aparece con la pestaña Diseño en la parte inferior resaltada. Haga clic en la pestaña Texto para ver el código XML. A continuación se muestra el código XML para un **LinearLayout** con dos elementos de botón con un **TextView** en el medio:
 
-  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.android.hellotoast.MainActivity">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      tools:context="com.example.android.hellotoast.MainActivity">
 
-    <Button
+      <Button
         android:id="@+id/button_toast"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -224,7 +224,7 @@ Para ver y editar el código XML, abra el archivo de diseño XML. El editor de d
         android:text="@string/button_label_toast"
         android:textColor="@android:color/white" />
 
-    <TextView
+      <TextView
         android:id="@+id/show_count"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -241,7 +241,7 @@ Para ver y editar el código XML, abra el archivo de diseño XML. El editor de d
         android:textStyle="bold"
         android:layout_weight="1"/>
 
-    <Button
+      <Button
         android:id="@+id/button_count"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -252,7 +252,7 @@ Para ver y editar el código XML, abra el archivo de diseño XML. El editor de d
         android:onClick="countUp"
         android:text="@string/button_label_count"
         android:textColor="@android:color/white" />
-  </LinearLayout>
+    </LinearLayout>
 
 #### <a id="archivos"></a> Archivos de recursos
 #### <a id="respondiendo"></a> Respondiendo a los gestos
