@@ -174,7 +174,86 @@ Haga clic en el botón de restricción de línea de base. El control de línea d
 
 ![Restricción de linea de base](https://drive.google.com/open?id=1NdPNOlm592-TqZgn4XqKPh9ToI_ezeKm)
 
+##### Usando el panel de atributos
+
+El panel **Atributos** ofrece acceso a todos los **Atributos** XML que puede asignar a un elemento de la interfaz de usuario. Se pueden encontrar los **Atributos** (conocidos como propiedades) comunes a todas las vistas en la documentación de la clase Ver.
+
+Para mostrar el panel **Atributos**, haga clic en la pestaña **Atributos** en el lado derecho del editor de diseño. El panel **Atributos** incluye un panel de tamaño cuadrado denominado *inspector de vista*. Los símbolos dentro del inspector de vista representan los ajustes de altura y anchura.
+
+![Panel de atributos](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/as_layout_width_height_box_annot.png)
+
+La figura de arriba muestra el panel de atributos:
+
+1. **Control de tamaño de vista vertical**. El control de tamaño vertical, que aparece en la parte superior e inferior del inspector de vista, especifica la propiedad *layout_height*. Los ángulos indican que este control de tamaño se establece en wrap_content, lo que significa que el elemento UI se expande verticalmente según sea necesario para ajustarse a su contenido. El "8" indica un margen estándar establecido en 8 dp.
+2. **Control de tamaño de vista horizontal**. El control de tamaño horizontal, que aparece a la izquierda y a la derecha del inspector de vista, especifica el *layout_width*. Los ángulos indican que este control de tamaño se establece en wrap_content, lo que significa que el elemento UI se expande horizontalmente según sea necesario para ajustarse a su contenido, hasta un margen de 8 dp.
+3. ** Botón de cerrar del Panel de atributos**. Haga clic para cerrar el panel.
+
+Los atributos layout_width y layout_height en el panel Atributos cambian a medida que cambia los controles de tamaño horizontal y vertical del inspector. Estos atributos pueden tomar uno de los tres valores para un ConstraintLayout:
+
+  * La configuración **match_constraint** expande el elemento UI para rellenar su padre por ancho o alto hasta un margen, si se establece ese margen. El padre en este caso es el ConstraintLayout.
+  * La configuración de **wrap_content** reduce el elemento de la IU al tamaño de su contenido. Si no hay contenido, el elemento se vuelve invisible.
+  * Para especificar un tamaño fijo ajustado para el tamaño de la pantalla del dispositivo, establezca un número de dp (píxeles independientes de la densidad). Por ejemplo, 16dp significa 16 píxeles independientes de la densidad.
+
+Sugerencia: si cambia el atributo **layout_width** usando un menú emergente, el atributo **layout_width** se establece en cero porque no hay una dimensión establecida. Esta configuración es la misma que match_constraint: el elemento UI puede expandirse tanto como sea posible para cumplir con las restricciones y la configuración de márgenes.
+
+El panel **Atributos** ofrece acceso a todos los atributos que puede asignar a un elemento de Vista. Puede ingresar valores para cada atributo, como los atributos de android: id, background, textColor y text.
+
 #### <a id="editando"></a> Editando el archivo XML directamente
+
+A veces es más rápido y más fácil editar el código XML directamente, especialmente al copiar y pegar el código para obtener vistas similares.
+
+Para ver y editar el código XML, abra el archivo de diseño XML. El editor de diseño aparece con la pestaña Diseño en la parte inferior resaltada. Haga clic en la pestaña Texto para ver el código XML. A continuación se muestra el código XML para un **LinearLayout** con dos elementos de botón con un **TextView** en el medio:
+
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.hellotoast.MainActivity">
+
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="showToast"
+        android:text="@string/button_label_toast"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFFF00"
+        android:text="@string/count_initial_value"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="160sp"
+        android:textStyle="bold"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="countUp"
+        android:text="@string/button_label_count"
+        android:textColor="@android:color/white" />
+  </LinearLayout>
+
 #### <a id="archivos"></a> Archivos de recursos
 #### <a id="respondiendo"></a> Respondiendo a los gestos
 #### <a id="practicas"></a> Prácticas relacionadas
