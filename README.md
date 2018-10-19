@@ -326,6 +326,31 @@ El tamaño de una vista incluye su relleno. Los siguientes son atributos de *pad
 
 *Sugerencia*: para ver todos los atributos XML de un LinearLayout, consulte la sección Resumen de la definición de la clase LinearLayout. Otros diseños de layout, como RelativeLayout y AbsoluteLayout, también enumeran sus atributos XML en las secciones de Resumen.  
 
+######  Posicionamiento con RelativeLayout
+
+Otro grupo de vistas útil para el diseño es RelativeLayout, que se puede utilizar para colocar elementos de vista secundarios relacionados entre sí o con el padre. Los atributos que puede usar con RelativeLayout incluyen lo siguiente:
+
+  * **android:layout_toLeftOf**: coloca el borde derecho de esta vista a la izquierda de otra vista (identificada por su ID).
+  * **android:layout_toRightOf**: coloca el borde izquierdo de esta vista a la derecha de otra vista (identificada por su ID).
+  * **android:layout_centerHorizontal**: Centra esta vista horizontalmente dentro de su padre.
+  * **android:layout_centerVertical**: centra esta vista verticalmente dentro de su padre.
+  * **android:layout_alignParentTop**: coloca el borde superior de esta vista para que coincida con el borde superior del padre.
+  * **android:layout_alignParentBottom**: coloca el borde inferior de esta vista para que coincida con el borde inferior del padre.
+
+Para obtener una lista completa de los atributos de los elementos de la subclase *View* y ver en un RelativeLayout, consulte [RelativeLayout.LayoutParams](https://developer.android.com/reference/android/widget/RelativeLayout.LayoutParams.html).
+
+##### Atributos relacionados con el estilo
+
+Asimismo, se pueden especificar los atributos de estilo para personalizar la apariencia de una vista. Una *View* que no tiene atributos de estilo, como *android:textColor*, *android:textSize* y *android:background* si no que adopta los estilos definidos en el tema de la aplicación.
+
+Los siguientes son atributos relacionados con el estilo utilizados en la lección sobre el uso del editor de diseño:
+
+  * android:background: especifica un color o recurso dibujable para usar como fondo.
+  * android:text: especifica el texto que se mostrará en la vista.
+  * android:textColor: especifica el color del texto.
+  * android:textSize: especifica el tamaño del texto.
+  * android: textStyle:especifica el estilo del texto, como negrita.
+
 #### <a id="archivos"></a> Archivos de recursos
 #### <a id="respondiendo"></a> Respondiendo a los gestos
 #### <a id="practicas"></a> Prácticas relacionadas
