@@ -166,6 +166,12 @@ Las restricciones que se definen en el editor de diseño se crean como atributos
 
 > app:layout_constraintTop_toTopOf="parent"
 
+##### Creando una restricción de linea de base
+
+Puede alinear un elemento de la interfaz de usuario que contenga texto, como *TextView* o *Button* con otro elemento de la interfaz de usuario que contenga texto. Una restricción de línea de base le permite restringir los elementos para que coincidan las líneas de base del texto. Seleccione el elemento de la interfaz de usuario que tiene texto y luego desplace el puntero sobre el elemento hasta que aparezca el botón de restricción ![botón de línea de base](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/ic_ab_baseline_icon.png) de línea de base debajo del elemento.
+
+Haga clic en el botón de restricción de línea de base. El control de línea de base aparece, parpadeando en verde como se muestra en la figura animada. Arrastre una línea de restricción de línea de base a la línea de base del otro elemento de la interfaz de usuario. Puede verlo en la pestaña Texto como se describe en "Editar XML directamente" en este capítulo. Por ejemplo, el siguiente código XML se crea restringiendo la parte superior de un elemento a la parte superior de su padre:
+
 #### <a id="editando"></a> Editando el archivo XML directamente
 #### <a id="archivos"></a> Archivos de recursos
 #### <a id="respondiendo"></a> Respondiendo a los gestos
