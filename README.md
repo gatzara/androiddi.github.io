@@ -253,6 +253,78 @@ Para ver y editar el código XML, abra el archivo de diseño XML. El editor de d
         android:text="@string/button_label_count"
         android:textColor="@android:color/white" />
     </LinearLayout>
+    
+##### Atributos XML (Vista de Propiedades)
+
+Las vistas tienen propiedades que se definen dónde aparece una vista en la pantalla, su tamaño, cómo se relaciona la vista con otras vistas y cómo responde a la entrada del usuario. Al definir vistas en XML o en el panel Atributos del editor de diseño, las propiedades se conocen como **atributos**.
+
+Por ejemplo, en la siguiente descripción XML de un *TextView*, **android:id*, android:layout_width, android:layout_height, android:background** son atributos XML que se traducen automáticamente en las propiedades de TextView:
+
+    <TextView
+       android:id="@+id/show_count"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/myBackgroundColor"
+       android:textStyle="bold"
+       android:text="@string/count_initial_value" />
+
+##### Identificando una vista
+
+Para identificar de forma única una Vista y hacer referencia a ella desde su código, debe asignarle un ID. El atributo android: id le permite especificar una identificación única, un identificador de recursos para una Vista. Con el "+" se especifica que se está añadiendo un nuevo identificador.
+
+Por ejemplo:
+> android:id="@+id/button_count"
+
+
+##### Haciendo referencia a una vista
+
+Para hacer referencia a un identificador de recurso existente, omita el símbolo más (+). Por ejemplo, para referirse a una Vista por su id en otro atributo, como android: layout_toLeftOf (descrito en la siguiente sección) para controlar la posición de una Vista, debe usar:
+> android:layout_toLeftOf="@id/show_count"
+
+##### Posicionando una vista
+
+Algunos atributos de posicionamiento relacionados con el diseño son necesarios para una Vista o un *ViewGroup*, y aparecen automáticamente cuando agrega la Vista o el Grupo de vistas al diseño XML.
+
+######  Posicionamiento con LinearLayout
+
+Se requiere que LinearLayout tenga estos atributos establecidos:
+
+  * android:layout_width
+  * android:layout_height
+  * android:orientación
+
+Los atributos *android:layout_width* y *android:layout_height* pueden tomar uno de tres valores:
+
+  * **match_parent** expande el elemento UI para llenar su padre por ancho o alto. Cuando LinearLayout es el ViewGroup raíz, se expande al tamaño de la pantalla del dispositivo. Para un elemento de la interfaz de usuario dentro de un grupo de vista raíz, se expande al tamaño del grupo de vista principal.
+  * **wrap_content** reduce el elemento UI al tamaño de su contenido. Si no hay contenido, el elemento se vuelve invisible.
+  * **Utilizar un número fijo de dp (píxeles independientes de la densidad)** para especificar un tamaño fijo, ajustado para el tamaño de la pantalla del dispositivo. Por ejemplo, 16dp significa 16 píxeles independientes de la densidad. Los píxeles independientes de la densidad y otras dimensiones se describen en "Dimensiones" en este capítulo.
+
+La propiedad android:orientatión puede ser:
+  * **horizontal**: las vistas están ordenadas de izquierda a derecha.
+  * **vertical**: las vistas se organizan de arriba a abajo.
+
+Otros atributos relacionados con el diseño incluyen:
+
+  * **android:layout_gravity**: este atributo se usa con un elemento de la interfaz de usuario para controlar dónde está dispuesto el elemento dentro de su elemento primario. Por ejemplo, el siguiente atributo centra el elemento UI horizontalmente en el ViewGroup principal:
+
+> android: layout_gravity="center_horizontal"
+
+  * El **padding** es el espacio, medido en píxeles independientes de la densidad, entre los bordes del elemento UI y el contenido del elemento, como se muestra en la siguiente figura.
+  
+  ![Propiedad de padding](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/dg_padding_annotated.png)
+  
+En la figura anterior: (1) El *Padding* es el espacio entre los bordes de TextView (líneas discontinuas) y el contenido de TextView (línea continua). El relleno no es lo mismo que el margen, que es el espacio desde el borde de la Vista hasta su padre.
+
+El tamaño de una vista incluye su relleno. Los siguientes son atributos de *padding* comúnmente utilizados:
+  * **android:padding**: establece el padding de los cuatro bordes.
+  * **android:paddingTop**: establece el padding del borde superior.
+  * **android:paddingBottom**: establece el padding del borde inferior.
+  * **android:paddingLeft**: establece el padding del borde izquierdo.
+  * **android:paddingRight**: establece el padding del borde derecho.
+  * **android:paddingStart**: establece el padding del inicio de la vista, en píxeles. Se usa en lugar de los atributos de relleno enumerados anteriormente, especialmente con vistas largas y estrechas.
+  * **android:paddingEnd**: establece el padding del borde final de la vista, en píxeles. Se utiliza junto con Android: paddingStart.
+
+*Sugerencia*: para ver todos los atributos XML de un LinearLayout, consulte la sección Resumen de la definición de la clase LinearLayout. Otros diseños de layout, como RelativeLayout y AbsoluteLayout, también enumeran sus atributos XML en las secciones de Resumen.  
 
 #### <a id="archivos"></a> Archivos de recursos
 #### <a id="respondiendo"></a> Respondiendo a los gestos
