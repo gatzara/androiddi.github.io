@@ -410,6 +410,15 @@ El nombre (por ejemplo, button_label_count) es el nombre del recurso que se usa 
 
 > android:text="@string/button_label_count"
 
+El valor de cadena de este nombre es la palabra (count) incluida dentro de las etiquetas <string> </string>. (No utilice comillas a menos que las comillas formen parte del valor de la cadena).
+
+##### Extraer cadenas a recursos.
+
+[extracción de recursos XML](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/as_extract_string_resources.png)
+[asignacion de atributo-valor](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/as_extract_string_resources2.png)
+
+También debe extraer cadenas codificadas en un archivo de diseño XML para encadenar recursos.
+
 #### <a id="respondiendo"></a> Respondiendo a los gestos
 #### <a id="practicas"></a> Prácticas relacionadas
 #### <a id="aprende"></a> Aprende más
