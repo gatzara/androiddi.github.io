@@ -367,13 +367,48 @@ La sintaxis para hacer referencia a un recurso en un diseño XML es la siguiente
 
 > @nombre_paquete:tipo_recurso/nombre_recurso
 
-El nombre del paquete es el nombre del elemento en el que se encuentra el recurso. El nombre del paquete no es necesario cuando hace referencia a los recursos que están almacenados en la carpeta res de su proyecto, porque estos recursos son del mismo paquete.
+  * El nombre del paquete es el nombre del elemento en el que se encuentra el recurso. El nombre del paquete no es necesario cuando hace referencia a los recursos que están almacenados en la carpeta res de su proyecto, porque estos recursos son del mismo paquete.
+  * El tipo de recurso es la subclase R para el tipo de recurso. Consulte [Tipos de recursos](https://developer.android.com/guide/topics/resources/available-resources.html) para obtener más información sobre los tipos de recursos y cómo hacer referencia a ellos.
+  * El nombre del recurso es el nombre de archivo del recurso sin la extensión, o el valor del atributo *android:name* en el elemento XML.
 
-El tipo de recurso es la subclase R para el tipo de recurso. Consulte [Tipos de recursos](https://developer.android.com/guide/topics/resources/available-resources.html) para obtener más información sobre los tipos de recursos y cómo hacer referencia a ellos.
+Por ejemplo, la siguiente declaración de diseño XML establece el atributo *android:text* en un recurso de cadena:
+> android:text="@string/button_label_toast"
 
-El nombre del recurso es el nombre de archivo del recurso sin la extensión, o el valor del atributo *android:name* en el elemento XML.
 
-Por ejemplo, la siguiente declaración de diseño XML establece el atributo android: text en un recurso de cadena:
+  * Ningún nombre de paquete se inserta porque el recurso está dentro del fichero *strings.xml* del proyecto
+  * El tipo de recurso es un tipo *string*
+  * El nombre del recurso es *button_label_toast*.
+  
+ Otro ejemplo: esta declaración de diseño XML establece el atributo *android:background* en un recurso de color, y como el recurso está definido en el proyecto (en el archivo colors.xml), el nombre de paquete no se especifica:
+
+> android:background="@ color/colorPrimary"
+
+En el siguiente ejemplo, la declaración de diseño XML establece el atributo android:textColor en un recurso de color. Sin embargo, el recurso no está definido en el proyecto, pero es suministrado por Android, por lo que debe especificar el nombre de paquete, que es android, seguido de dos puntos:
+
+> android:textColor="@android:color/white"
+
+Sugerencia: para obtener más información sobre cómo acceder a los recursos desde el código, consulte [Cómo acceder a los recursos](http://developer.android.com/guide/topics/resources/accessing-resources.html). Para las constantes de color de Android, consulte los [recursos de R.color estándar de Android](http://developer.android.com/reference/android/R.color.html).
+
+###### Ficheros de recursos de valores
+
+Mantener valores como cadenas y colores en archivos de recursos separados facilita su gestión, especialmente si los usa más de una vez en sus layouts.
+
+Por ejemplo, es esencial mantener las cadenas en un archivo de recursos separado para traducir y localizar su aplicación, de modo que pueda crear un archivo de recursos de cadena para cada idioma sin cambiar su código. Los archivos de recursos para imágenes, colores, dimensiones y otros atributos son útiles para desarrollar una aplicación para diferentes tamaños de pantalla y orientaciones de dispositivos.
+
+###### Cadenas
+
+Los recursos de cadena se encuentran en el archivo strings.xml (dentro de **res>values** en el panel **Project> Android**). Puede editar este archivo directamente abriéndolo en el panel del editor:
+
+    <resources>
+     <string name="app_name">Hello Toast</string>
+     <string name="button_label_count">Count</string>
+     <string name="button_label_toast">Toast</string>
+     <string name="count_initial_value">0</string>
+    </resources>
+    
+El nombre (por ejemplo, button_label_count) es el nombre del recurso que se usa en el código XML, tal y como se muestra en el siguiente atributo:
+
+> android:text="@string/button_label_count"
 
 #### <a id="respondiendo"></a> Respondiendo a los gestos
 #### <a id="practicas"></a> Prácticas relacionadas
