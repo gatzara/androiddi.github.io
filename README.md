@@ -349,9 +349,32 @@ Los siguientes son atributos relacionados con el estilo utilizados en la lecció
   * android:text: especifica el texto que se mostrará en la vista.
   * android:textColor: especifica el color del texto.
   * android:textSize: especifica el tamaño del texto.
-  * android: textStyle:especifica el estilo del texto, como negrita.
+  * android:textStyle:especifica el estilo del texto, como negrita.
 
 #### <a id="archivos"></a> Archivos de recursos
+
+Los archivos de recursos son una forma de separar los valores estáticos del código para que no tenga que cambiar el código en sí para cambiar los valores. Puede almacenar todas las cadenas, diseños, dimensiones, colores, estilos y texto de menú por separado en archivos de recursos.
+
+Los archivos de recursos se almacenan en carpetas ubicadas en la carpeta **res** en el panel *Project>Android*. Estas carpetas incluyen:
+
+  * **Drawable**: para imagenes e iconos.
+  * **Layout**: para archivos de diseño de las diferentes activites
+  * **Menu**: para elementos de menú
+  * **Mipmap**: para colecciones precargadas y optimizadas de íconos de aplicaciones utilizados por el Lanzador
+  * **Values**: para colores, dimensiones, cadenas y estilos (atributos de tema)
+
+La sintaxis para hacer referencia a un recurso en un diseño XML es la siguiente:
+
+> @nombre_paquete:tipo_recurso/nombre_recurso
+
+El nombre del paquete es el nombre del elemento en el que se encuentra el recurso. El nombre del paquete no es necesario cuando hace referencia a los recursos que están almacenados en la carpeta res de su proyecto, porque estos recursos son del mismo paquete.
+
+El tipo de recurso es la subclase R para el tipo de recurso. Consulte [Tipos de recursos](https://developer.android.com/guide/topics/resources/available-resources.html) para obtener más información sobre los tipos de recursos y cómo hacer referencia a ellos.
+
+El nombre del recurso es el nombre de archivo del recurso sin la extensión, o el valor del atributo *android:name* en el elemento XML.
+
+Por ejemplo, la siguiente declaración de diseño XML establece el atributo android: text en un recurso de cadena:
+
 #### <a id="respondiendo"></a> Respondiendo a los gestos
 #### <a id="practicas"></a> Prácticas relacionadas
 #### <a id="aprende"></a> Aprende más
