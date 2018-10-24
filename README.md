@@ -10,7 +10,7 @@ Contenido:
 * [El editor de diseño](#editor)
 * [Editando XML directamente](#editando)
 * [Archivos de recursos](#archivos)
-* [Respondiendo a los gestos](#respondiendo)
+* [Respondiendo a los gestos Click](#respondiendo)
 * [Practicas relacionadas](#practicas)
 * [Aprende más](#aprende)
 
@@ -417,8 +417,125 @@ El valor de cadena de este nombre es la palabra (count) incluida dentro de las e
 ![extracción de recursos XML](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/as_extract_string_resources.png)
 ![asignacion de atributo-valor](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/as_extract_string_resources2.png)
 
-También debe extraer cadenas codificadas en un archivo de diseño XML para encadenar recursos.
+Para extraer una cadena codificada en un diseño XML, siga estos pasos, como se muestra en la figura anterior:
 
-#### <a id="respondiendo"></a> Respondiendo a los gestos
+  1 Haga clic en la cadena codificada y presione Alt-Enter en Windows, o Option-Return en Mac OS X.
+  2 Seleccione Extraer recurso de cadena.
+  3.Edite el nombre del recurso para el valor de la cadena.
+
+A continuación, puede utilizar el nombre del recurso en su código XML. Use la expresión "@string/resource_name" (incluidas las comillas) para referirse al recurso de cadena:
+
+> android:text="@string/button_label_count"
+
+##### Colores
+
+Los recursos de color se encuentran en el archivo colors.xml (dentro de res>values en el panel Project> Android). Puede editar este archivo directamente en el panel del editor:
+
+    <resources>
+     <color name = "colorPrimary"> # 3F51B5 </color>
+     <color name = "colorPrimaryDark"> # 303F9F </color>
+     <color name = "colorAccent"> # FF4081 </color>
+     <color name = "myBackgroundColor"> # FFF043 </color>
+    </resources>
+
+El nombre (por ejemplo, colorPrimary) es el nombre del recurso que usa en su código XML:
+
+> android:textColor= "@color/colorPrimary"
+
+El valor de color de este nombre es el valor de color hexadecimal (# 3F51B5) incluido dentro de las etiquetas <color> </color>. El valor hexadecimal especifica valores de rojo, verde y azul (RGB). El valor siempre comienza con un carácter de almohadilla (#), seguido de la información Alfa-Rojo-Verde-Azul. Por ejemplo, el valor hexadecimal para negro es # 000000, mientras que el valor hexadecimal para una variante de azul cielo es # 559fe3. Los valores de color base se enumeran en la documentación de la clase [Color](https://developer.android.com/reference/android/graphics/Color.html).
+
+El color del *coloPrimary* es uno de los colores base predefinidos y se utiliza para la barra de aplicaciones. En una aplicación de producción, podría, por ejemplo, se podría personalizar éste para que se ajuste al logotipo de la app. El uso de los colores base para otros elementos de la interfaz de usuario crea una interfaz de usuario uniforme.
+
+**Consejo**: Para la especificación de *Material Design* para los colores de Android, consulte [Estilo](https://material.google.com/style/color.html#) y [Uso del tema Material](https://developer.android.com/training/material/theme.html). Para valores hexadecimales de color comunes, consulte [Códigos de color hexadecimales](http://www.color-hex.com/). Para las constantes de color de Android, consulte los [recursos de R.color estándar de Android](http://developer.android.com/reference/android/R.color.html).
+
+Puede ver un pequeño bloque de la opción de color en el margen izquierdo junto a la declaración de recursos de color en colors.xml, y también en el margen izquierdo junto al atributo que usa el nombre del recurso en el archivo XML de diseño.
+
+![Definición de colores](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/1-2-c-layouts-and-resources-for-the-ui/as_color_block_in_colors_xml.png)
+
+**Sugerencia**: para ver el color en una ventana emergente, active la función de documentación *Autopopup*. Seleccione **Preferences>Editor>General>Code completion**, y seleccione la opción "Autopopup documentation in (ms)". Luego puede colocar el cursor sobre un nombre de recurso de color para ver el color.
+
+##### Dimensiones
+
+Para facilitar la administración de las dimensiones, debe separarlas de su código, especialmente si necesita ajustar su diseño para dispositivos con diferentes densidades de pantalla. Mantener las dimensiones separadas del código también facilita tener un tamaño uniforme para los elementos de la interfaz de usuario y cambiar el tamaño de múltiples elementos cambiando solo un recurso de dimensión.
+
+Los recursos de dimensión se encuentran en el archivo *dimens.xml* (dentro de **res>values** en el panel **Project>Android**). El archivo *dimens.xml* puede ser realmente una carpeta que contiene más de un archivo dimens.xml, uno para cada resolución de pantalla del dispositivo. Puedes editar cada archivo dimens.xml directamente:
+
+    <resources>
+     <!-- Default screen margins, per the Android Design guidelines. -->
+     <dimen name="activity_horizontal_margin">16dp</dimen>
+     <dimen name="activity_vertical_margin">16dp</dimen>
+     <dimen name="my_view_width">300dp</dimen>
+     <dimen name="count_text_size">200sp</dimen>
+     <dimen name="counter_height">300dp</dimen>
+    </resources>
+    
+ De este modo, si queremos aplicar un padding horizontal:
+ 
+ > android:paddingLeft="@dimen/activity_horizontal_margin"
+ 
+ De igual modo que en las cadenas, las dimensiones se pueden extraer a un fichero específico donde es más fácil poder gestionarlas.
+ 
+ Los **píxeles independientes de densidad (dp)** son independientes de la resolución de pantalla. Por ejemplo, *10px* (10 píxeles fijos) se ven mucho más pequeños en una pantalla de resolución más alta, pero Android escala *10dp* (10 píxeles independientes del dispositivo) para verse bien en diferentes pantallas de resolución. Los tamaños de texto también se pueden configurar para que se vean bien en diferentes pantallas de resolución utilizando tamaños de píxeles escalados (sp).
+
+Sugerencia: Para obtener más información sobre las unidades *dp y sp*, consulte [Soportar diferentes densidades](http://developer.android.com/training/multiscreen/screendensities.html).
+
+##### Estilos
+
+Un estilo es un recurso que especifica atributos comunes como altura, relleno, color de fuente, tamaño de fuente, color de fondo. Los estilos están diseñados para atributos que modifican el aspecto de la vista.
+
+Los estilos se definen en el archivo *styles.xml* (dentro de **res>values** en el panel **Project>Android**). Puede editar este archivo directamente. Los estilos se tratan en un capítulo posterior, junto con la Especificación de Material Design.
+
+##### Otros archivos de recursos
+
+Android Studio define otros recursos que se tratan en otros capítulos:
+
+  * **Imágenes e íconos**: La carpeta *Drawable* proporciona recursos de íconos e imágenes. Si su aplicación no tiene una carpeta *Drawable*, puede crearla manualmente dentro de la carpeta **res**. Para obtener más información sobre los recursos *Drawable*, consulte [Recursos Drawables](https://developer.android.com/guide/topics/resources/drawable-resource.html) en la sección Recursos de la aplicación de la Guía del desarrollador de Android.
+  * **Iconos optimizados**: la carpeta *mipmap* normalmente contiene colecciones de iconos de aplicaciones precalculadas y optimizadas utilizadas por el Launcher. Expanda la carpeta para ver que las versiones de los iconos se almacenan como recursos para diferentes densidades de pantalla.
+  * **Menús**: puede usar un archivo de recursos XML para definir elementos del menú y almacenarlos en su proyecto en la carpeta *menu*. Los menús se describen en un capítulo posterior.
+
+
+#### <a id="respondiendo"></a> Respondiendo a los gestos Click
+
+Se produce un evento de clic cuando el usuario toca o hace clic en una vista en la que se puede hacer clic, como un Button, ImageButton, ImageView o FloatingActionButton. Cuando ocurre tal evento, su código realiza una acción. Para que este patrón funcione, tienes que:
+
+  * Escriba un método Java/Kotlin que realice la acción específica que desea que realice la aplicación cuando ocurra este evento. Este método se conoce normalmente como un controlador de eventos.
+  * Asocie este método de controlador de eventos del *View*, de modo que el método se ejecute cuando ocurra el evento.
+
+##### El atributo onClick
+
+Android Studio proporciona un acceso directo para configurar una Vista en la que se puede hacer clic y para asociar un controlador de eventos con la Vista: use el atributo android:onClick en el diseño XML.
+
+Por ejemplo, el siguiente atributo XML establece que se puede hacer clic en un botón, y establece showToast() como el controlador de eventos:
+> <Button
+>    android:id="@+id/button_toast"
+>    android:onClick="showToast"
+
+Cuando el usuario toca el botón *button_toast*, el atributo *android:onClick* del botón llama al método *showToast()*. Para trabajar con el atributo *android:onClick*, el método *showToast()* debe ser público y no debe devolver ningún valor. Para saber qué *View* llamó al método, el método *showToast()* debe requerir un parámetro de *vista*.
+
+Android Studio proporciona un acceso directo para crear un apéndice de controlador de eventos (un marcador de posición para un método que puede completar más adelante) en el código de la Actividad asociada con el diseño XML. Sigue estos pasos:
+
+  * Dentro del archivo de diseño XML (como *activity_main.xml*), haga clic en el nombre del método en la declaración de atributos de *android:onClick* (*showToast* en el fragmento de código XML anterior).
+  * Presione **Alt-Enter** en Windows/Linux u **Option-Return** en Mac OS X, y seleccione **Crear controlador de eventos onClick.**
+  * Seleccione la Actividad asociada con el archivo de diseño (como **MainActivity**) y haga clic en **Ok**. Android Studio crea un código auxiliar de marcador de posición en *MainActivity.java* o *MainActivity.kt* como se muestra a continuación.
+  
+> fun showToast(View view) {
+>        // Do something in response to the button click.
+>}
+
+###### Actualizando una View
+
+Para actualizar una *View*, por ejemplo, para reemplazar el texto en un TextView, su código primero debe crear una instancia de un objeto desde la Vista. Su código puede actualizar el objeto, que actualiza la pantalla.
+
+Para referirse a la Vista en su código, puede usar el método findViewById () de la clase de Vista, que busca una Vista basada en la identificación del recurso. Por ejemplo, la siguiente declaración establece que mShowCount sea TextView en el diseño con el ID de recurso show_count:
+
+mShowCount = (TextView) findViewById (R.id.show_count);
+
+A partir de este momento, su código puede usar mShowCount para representar a TextView, de modo que cuando actualice mShowCount, se actualice TextView.
+
+Por ejemplo, cuando se toca el siguiente botón con el atributo android: onClick, onClick llama al método countUp ():
+
+Android: onClick = "countUp"
+
+Puede implementar countUp () para incrementar el conteo, convertir el conteo en una cadena y establecer la cadena como el texto para el objeto mShowCount:
 #### <a id="practicas"></a> Prácticas relacionadas
 #### <a id="aprende"></a> Aprende más
