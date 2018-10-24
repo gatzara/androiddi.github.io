@@ -526,16 +526,41 @@ Android Studio proporciona un acceso directo para crear un apéndice de controla
 
 Para actualizar una *View*, por ejemplo, para reemplazar el texto en un TextView, su código primero debe crear una instancia de un objeto desde la Vista. Su código puede actualizar el objeto, que actualiza la pantalla.
 
-Para referirse a la Vista en su código, puede usar el método findViewById () de la clase de Vista, que busca una Vista basada en la identificación del recurso. Por ejemplo, la siguiente declaración establece que mShowCount sea TextView en el diseño con el ID de recurso show_count:
+Para referirse a la Vista en su código, puede usar el método **findViewById()** de la clase de *View*, que busca una Vista basada en la identificación del recurso. Por ejemplo, la siguiente declaración establece que mShowCount sea TextView en el diseño con el ID de recurso show_count:
 
-mShowCount = (TextView) findViewById (R.id.show_count);
+> mShowCount = (TextView) findViewById (R.id.show_count);
 
-A partir de este momento, su código puede usar mShowCount para representar a TextView, de modo que cuando actualice mShowCount, se actualice TextView.
+o directamente usar Kotlin y su referencia simplificada al conjunto de vistas 
+> mShowCount = (TextView) show_count;
 
-Por ejemplo, cuando se toca el siguiente botón con el atributo android: onClick, onClick llama al método countUp ():
+A partir de este momento, su código puede usar mShowCount para representar la TextView, de modo que cuando actualice mShowCount, se actualice TextView.
 
-Android: onClick = "countUp"
+Por ejemplo, cuando se toca el siguiente botón con el atributo android:onClick, onClick llama al método countUp():
 
-Puede implementar countUp () para incrementar el conteo, convertir el conteo en una cadena y establecer la cadena como el texto para el objeto mShowCount:
+> android:onClick ="countUp"
+
+Puede implementar el método *countUp()* para incrementar el conteo, convertir el conteo en una cadena y establecer la cadena como el texto para el objeto mShowCount:
+
+    fun countUp(view:View) {
+      mCount++
+      if (mShowCount != null)
+       mShowCount.setText(Integer.toString(mCount))
+     }
+
 #### <a id="practicas"></a> Prácticas relacionadas
+
+Las lecciones prácticas relacionadas con esta unidad son:
+
+  * [1.2 Parte A: tu primera interfaz de usuario interactiva](https://codelabs.developers.google.com/codelabs/android-training-layout-editor-part-a)
+  * [1.2 Parte B: El editor de diseño](https://codelabs.developers.google.com/codelabs/android-training-layout-editor-part-b)
+
 #### <a id="aprende"></a> Aprende más
+
+Documentación de Andoid Studio:
+  * [Guía de usuario de Android Studio](https://developer.android.com/studio/intro/index.html)
+  * [Image Asset Studio](http://developer.android.com/tools/help/image-asset-studio.html)
+  
+Documentación de desarrolladores de Android
+  * [Vista rápida de las interfaces de usuario](https://developer.android.com/guide/topics/ui/overview.html)
+  * [Construir un layout con el editor de layouts](https://developer.android.com/studio/write/layout-editor.html)
+  * [Construir un layout responsivo con ConstraintLayout](https://developer.android.com/training/constraint-layout/index.html)
