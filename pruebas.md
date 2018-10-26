@@ -12,7 +12,7 @@ En este capítulo, se obtiene una descripción general de las pruebas de Android
 
 A parte de tener que comprobar cómo una aplicación se compila y se ejecuta y se ve como se visualiza en diferentes dispositivos, se debe asegurar también  que la aplicación se comporte de la manera que se espera en cada situación, especialmente a medida que su aplicación crece y cambia. Incluso si intenta probar una aplicación manualmente cada vez que realiza un cambio, ello conlleva una perspectiva tediosa en el mejor de los casos, en el peor se puede perder algo o no anticipar lo que los usuarios finales podrían hacer con su aplicación para hacer que falle.
 
-Escribir y ejecutar pruebas es una parte crítica del proceso de desarrollo de software. El desarrollo dirigido por pruebas (TDD) es una filosofía popular de desarrollo de software que coloca las pruebas en el núcleo de todo el desarrollo de software para una aplicación o servicio. Esto no niega la necesidad de realizar más pruebas, simplemente le brinda una base de referencia sólida con la que trabajar.
+Escribir y ejecutar pruebas es una parte crítica del proceso de desarrollo de software. El [desarrollo dirigido por pruebas (TDD)](https://en.wikipedia.org/wiki/Test-driven_development) es una filosofía popular de desarrollo de software que coloca las pruebas en el núcleo de todo el desarrollo de software para una aplicación o servicio. Esto no niega la necesidad de realizar más pruebas, simplemente le brinda una base de referencia sólida con la que trabajar.
 
 Probar el código puede ayudar a detectar problemas al inicio del desarrollo, cuando son los menos costosos de abordar, y mejorar la solidez de su código a medida que la aplicación se hace más grande y más compleja. Con las pruebas en su código, puede ejercitar pequeñas porciones de su aplicación de forma aislada y de manera automatizable y repetible para realizar pruebas más eficientes.
 
@@ -24,7 +24,7 @@ Android es compatible con varios tipos diferentes de pruebas y marcos de prueba.
 
 Las pruebas unitarias son pruebas que se compilan y ejecutan completamente en una máquina local con la Máquina Virtual de Java (JVM). Use las pruebas unitarias para probar las partes de su aplicación (como la lógica interna) que no necesitan acceso al marco de Android o un dispositivo o emulador con Android, o aquellas para las que puede crear falsos objectos ("mockups" o "stub") que pretenden comportarse como los equivalentes del entorno.
 
-Las pruebas instrumentales son pruebas que se ejecutan en un dispositivo o emulador con Android. Estas pruebas tienen acceso al marco de Android y a la información de **instrumentación**, como el **contexto** de la aplicación. Puede usar pruebas instrumentadas para pruebas unitarias, pruebas de interfaz de usuario (UI) o pruebas de integración, asegurándose de que los componentes de su aplicación interactúen correctamente con otras aplicaciones. Más comúnmente, se usaa pruebas instrumentales para las pruebas de interfaz de usuario, lo que le permite probar que su aplicación se comporta correctamente cuando un usuario interactúa con su aplicación o ingresa una entrada específica.
+Las pruebas instrumentales son pruebas que se ejecutan en un dispositivo o emulador con Android. Estas pruebas tienen acceso al marco de Android y a la información de [Instrumentation](https://developer.android.com/reference/android/app/Instrumentation.html), como el [Context](https://developer.android.com/reference/android/content/Context.html) de la aplicación. Puede usar pruebas instrumentadas para pruebas unitarias, pruebas de interfaz de usuario (UI) o pruebas de integración, asegurándose de que los componentes de su aplicación interactúen correctamente con otras aplicaciones. Más comúnmente, se usaa pruebas instrumentales para las pruebas de interfaz de usuario, lo que le permite probar que su aplicación se comporta correctamente cuando un usuario interactúa con su aplicación o ingresa una entrada específica.
 
 Para la mayoría de las formas de prueba de interfaz de usuario, se utiliza el framework *Espresso*, que le permite escribir pruebas de interfaz de usuario automatizadas. 
 
@@ -34,7 +34,7 @@ Las pruebas unitarias deben ser las pruebas fundamentales en su estrategia de pr
 
 Una prueba de unidad generalmente ejerce la funcionalidad de la unidad de código más pequeña posible (que podría ser un método, clase o componente) de manera repetible. Cree pruebas unitarias cuando necesite verificar la lógica de un código específico en su aplicación. Por ejemplo, si prueba una clase por unidad, su prueba podría verificar que la clase se encuentra en el estado correcto. Para un método, puede probar su comportamiento para diferentes valores de sus parámetros, especialmente focalizando la gestión de valores nulos.
 
-Por lo general, el test unitario se prueba de forma aislada y su prueba monitorea los cambios solo en esa unidad. Puede usar un marco de simulacro como **Mockito** para aislar su unidad de sus dependencias. También puede escribir sus pruebas de unidad para Android en **JUnit4**, un marco de prueba de unidad común para código Java.
+Por lo general, el test unitario se prueba de forma aislada y su prueba monitorea los cambios solo en esa unidad. Puede usar un marco de simulacro como [Mockito](http://mockito.org/) para aislar su unidad de sus dependencias. También puede escribir sus pruebas de unidad para Android en [JUnit4](https://junit.org/junit4/), un marco de prueba de unidad común para código Java.
 
 #### La biblioteca de soporte de pruebas de Android
 
@@ -92,7 +92,7 @@ Después de editar el archivo build.gradle (Module:app), se debe sincronizar el 
 
 #### Configurando un plan de ejecución de pruebas
 
-Un plan de ejecución de pruebas es una biblioteca o conjunto de herramientas que permite que se realicen las pruebas y que los resultados se impriman en un registro. Un proyecto de Android tiene acceso a un corredor de prueba JUnit básico como parte de las API de JUnit4. La biblioteca de compatibilidad de pruebas de Android incluye un plan de ejecución de pruebas para pruebas instrumentales y de tests Expresso, AndroidJUnitRunner, que también admite JUnit3 y 4.
+Un plan de ejecución de pruebas es una biblioteca o conjunto de herramientas que permite que se realicen las pruebas y que los resultados se impriman en un registro. Un proyecto de Android tiene acceso a un corredor de prueba JUnit básico como parte de las API de JUnit4. La biblioteca de compatibilidad de pruebas de Android incluye un plan de ejecución de pruebas para pruebas instrumentales y de tests Expresso, [AndroidJUnitRunner](https://developer.android.com/reference/android/support/test/runner/AndroidJUnitRunner.html), que también admite JUnit3 y 4.
 
 Este capítulo muestra el plan de ejecución predeterminado para las pruebas unitarias, que se suministra con las plantillas de actividad, como la plantilla de actividad vacía. En el archivo build.gradle (Module:app) del proyecto de una aplicación, el siguiente plan de ejecución ya debería estar incluido en la sección defaultConfig (si no, debería agregarlo):
 
@@ -121,7 +121,7 @@ Use la sintaxis y anotaciones de JUnit4 para escribir sus pruebas. Por ejemplo, 
   * La anotación @Before marca un método como el configurador de la prueba.
   * La anotación @Test marca un método como una prueba real.
 
-Para obtener más información sobre las anotaciones de JUnit, consulte la **Referencia de API de JUnit 4**.
+Para obtener más información sobre las anotaciones de JUnit, consulte la [Referencia de API de JUnit 4](http://junit.sourceforge.net/javadoc/org/junit/package-summary.html).
 
     @RunWith(JUnit4.class)
     @SmallTest
@@ -141,9 +141,9 @@ Para obtener más información sobre las anotaciones de JUnit, consulte la **Ref
         }
     }
 
-El método addTwoNumbers() es la prueba real. La parte clave de una prueba unitaria es la aserción, que se define aquí mediante el método **assertThat()**. Las aserciones son expresiones que deben evaluarse y dar como resultado un valor de verdadero para que la prueba pase. Para obtener más información sobre las aserciones, consulte la documentación de referencia de JUnit para la clase **Assert**.
+El método addTwoNumbers() es la prueba real. La parte clave de una prueba unitaria es la aserción, que se define aquí mediante el método **assertThat()**. Las aserciones son expresiones que deben evaluarse y dar como resultado un valor de verdadero para que la prueba pase. Para obtener más información sobre las aserciones, consulte la documentación de referencia de JUnit para la clase [Assert](http://junit.org/junit4/javadoc/4.12/org/junit/Assert.html).
 
-JUnit 4 proporciona una serie de métodos de aseveración, pero *assertThat()* es el más flexible, ya que permite métodos de comparación de propósito general llamados *matchers*. El framework de Hamcrest se usa comúnmente para los matchers. Hamcrest incluye una gran cantidad de métodos de comparación y permite escribir los propios. Para obtener más información sobre el framework de Hamcrest, consulte la página de inicio de **Java Hamcrest**.
+JUnit 4 proporciona una serie de métodos de aseveración, pero *assertThat()* es el más flexible, ya que permite métodos de comparación de propósito general llamados *matchers*. El framework de Hamcrest se usa comúnmente para los matchers. Hamcrest incluye una gran cantidad de métodos de comparación y permite escribir los propios. Para obtener más información sobre el framework de Hamcrest, consulte la página de inicio de [Java Hamcrest](http://hamcrest.org/JavaHamcrest/).
 
 Tenga en cuenta que el método addTwoNumbers() en este ejemplo incluye solo una aserción. La regla general para las pruebas unitarias es proporcionar un método de prueba separado para cada aseveración individual. Agrupar más de una aserción en un solo método puede hacer que las pruebas sean más difíciles de depurar si solo falla una aserción, y oculta las pruebas que tienen éxito.
 
@@ -158,3 +158,32 @@ Para ejecutar sus pruebas unitarias, siga estos pasos:
   ![resultados de pruebas](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/3-2-c-app-testing/run-test-ok.png)
 
 El proyecto se compila, si es necesario, y la vista de prueba aparece en la parte inferior de la pantalla. Si todas las pruebas que ejecutó son exitosas, la barra de progreso en la parte superior de la vista se vuelve verde. Un mensaje de estado en el pie de página también informa "Pruebas aprobadas".
+
+
+### <a id="practicas"></a>Prácticas relacionadas
+
+La práctica relacionada con los tests de las prácticas unitarias es la [3.2 Tests unitarios](https://codelabs.developers.google.com/codelabs/android-training-unit-tests)
+
+### <a id="aprende"></a>Aprende más
+
+<p>Android Studio documentation:</p>
+<ul>
+<li><a href="https://developer.android.com/studio/intro/index.html" target="_blank">Android Studio User Guide</a> </li>
+<li><a href="https://developer.android.com/studio/debug/am-logcat.html" target="_blank">Write and View Logs</a> </li>
+</ul>
+<p>Documentación para desarrolladores Android:</p>
+<ul>
+<li><a href="https://developer.android.com/training/testing/index.html" target="_blank">Buenas prácticas para el Testing</a></li>
+<li><a href="https://developer.android.com/training/testing/start/index.html" target="_blank">Empezando con el Testing </a></li>
+<li><a href="https://developer.android.com/training/testing/unit-testing/local-unit-tests.html" target="_blank">Construyendo pruebas unitarias</a></li>
+</ul>
+<p>Otros:</p>
+<ul>
+<li><a href="http://junit.org/junit4/" target="_blank">JUnit 4 Home Page</a></li>
+<li><a href="http://junit.sourceforge.net/javadoc/org/junit/package-summary.html" target="_blank">JUnit 4 API Reference</a></li>
+<li><a href="https://www.tutorialspoint.com/java/lang/java_lang_math" target="_blank"><code>java.lang.Math</code></a></li>
+<li><a href="http://hamcrest.org/JavaHamcrest/" target="_blank">Java Hamcrest</a></li>
+<li><a href="http://mockito.org/" target="_blank">Mockito Home Page</a></li>
+<li>Video: <a href="https://www.youtube.com/watch?v=W8LJjfkTKik" target="_blank">Android Testing Support - Patrones de Testeo</a> </li>
+<li><a href="https://codelabs.developers.google.com/codelabs/android-testing/index.html" target="_blank">Android Testing Codelab</a></li>
+</ul>
