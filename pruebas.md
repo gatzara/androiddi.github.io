@@ -1,10 +1,10 @@
 # Probando la aplicación
 ## Contenido:
-    [Acerca de las pruebas](#acerca)
-    [Configuración de pruebas](#configuracion)
-    [Creación y ejecución de pruebas unitarias](#creacion).
-    [Prácticas relacionadas](#practicas)
-    [Aprende más](#aprende)
+* [Acerca de las pruebas](#acerca)
+* [Configuración de pruebas](#configuracion)
+* [Creación y ejecución de pruebas unitarias](#creacion).
+* [Prácticas relacionadas](#practicas)
+* [Aprende más](#aprende)
 
 En este capítulo, se obtiene una descripción general de las pruebas de Android y se aprenden a crear y ejecutar pruebas de unidades locales en Android Studio con JUnit.
 
