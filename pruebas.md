@@ -1,4 +1,4 @@
-# Probando la aplicación
+# 2. Probando la aplicación
 ## Contenido:
 * [Acerca de las pruebas](#acerca)
 * [Configuración de pruebas](#configuracion)
