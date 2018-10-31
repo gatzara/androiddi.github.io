@@ -1,7 +1,7 @@
-# La biblioteca de soporte de Android
+# 3. La biblioteca de soporte de Android
 
 ## Contenido:
-  * Acerca de la biblioteca de soporte de Android
+  * [Acerca de la biblioteca de soporte de Android](#acerca)
   * Bibliotecas de apoyo y características
   * Configuración y uso de la biblioteca de soporte de Android
   * Comprobando las versiones del sistema.
@@ -10,7 +10,7 @@
 
 En este capítulo, se explora la biblioteca de soporte de Android, que forma parte de las herramientas del SDK de Android. Sep uede usar la biblioteca de soporte de Android para obtener versiones compatibles con versiones anteriores de las nuevas funciones de Android ó más elementos de la interfaz de usuario (IU) no incluidos en el framework estándar de Android.
 
-### <a></a>Acerca de la biblioteca de soporte de Android
+### <a id="#acerca"></a>Acerca de la biblioteca de soporte de Android
 
 Las herramientas del SDK de Android incluyen una serie de bibliotecas llamadas colectivamente la Biblioteca de soporte de Android. Este paquete de bibliotecas proporciona varias características que no están integradas en el marco estándar de Android y proporciona compatibilidad con versiones anteriores para dispositivos más antiguos. Incluya cualquiera de estas bibliotecas en su aplicación para incorporar la funcionalidad de esa biblioteca.
 Nota: la biblioteca de soporte de Android es un paquete diferente de la biblioteca de soporte de pruebas de Android que conoció en otro capítulo. La biblioteca de soporte de pruebas proporciona herramientas y API solo para las pruebas, mientras que la biblioteca de soporte más general proporciona características de todo tipo (pero no de prueba).
