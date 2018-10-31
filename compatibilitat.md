@@ -4,7 +4,7 @@
   * [Acerca de la biblioteca de soporte de Android](#acerca)
   * [Librerías de apoyo y características](#librerias)
   * [Configuración y uso de la librería de soporte de Android](#configuracion)
-  * [Comprobando las versiones del sistema.](#versiones)
+  * [Comprobando las versiones del sistema.](#version)
   * [Prácticas relacionadas](#practicas)
   * [Aprende más](#aprende)
 
@@ -163,7 +163,7 @@ La biblioteca de soporte también incluye varias clases de View utilizadas en ar
 </android.support.design.widget.CoordinatorLayout>
 
 
-### <a id="versiones"></a>Comprobando las versiones del sistema.
+### <a id="version"></a>Comprobando las versiones del sistema.
 
 Aunque la librería de soporte puede ayudar a implementar aplicaciones únicas que funcionan en las versiones de la plataforma Android, puede haber ocasiones en las que necesite verificar la versión de Android en la que se está ejecutando su aplicación y proporcionar el código correcto para esa versión.
 
