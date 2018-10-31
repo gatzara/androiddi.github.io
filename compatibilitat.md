@@ -50,34 +50,34 @@ Además del número de versión real, el nombre de la propia librería de soport
 
 Todas las bibliotecas de soporte, incluidas las bibliotecas v4 y v7, requieren un SDK mínimo de API 9.
 
-Bibliotecas de apoyo y características
+### <a id="#librerias"></a> Librerías de soporte y características
 
 Esta sección describe las características importantes proporcionadas por las bibliotecas en la biblioteca de soporte de Android. Aprenderá sobre muchas de las funciones descritas en esta sección en otros capítulos.
 
-biblioteca de soporte v4
+#### librería de soporte v4
 
-Las bibliotecas de soporte v4 incluyen el conjunto más grande de API en comparación con las otras bibliotecas, incluido el soporte para componentes de aplicaciones, funciones de interfaz de usuario, accesibilidad, manejo de datos, conectividad de red y utilidades de programación.
+Las librerías de soporte v4 incluyen el conjunto más grande de API en comparación con las otras librerías, incluido el soporte para componentes de aplicaciones, funciones de interfaz de usuario, accesibilidad, manejo de datos, conectividad de red y utilidades de programación.
 
-Las bibliotecas de soporte de v4 incluyen estos componentes específicos:
+Las librerías de soporte de v4 incluyen estos componentes específicos:
 
-    v4 compat library: Envoltorios de compatibilidad (clases que incluyen la palabra "Compat") para una serie de API de infraestructura básica.
-    Biblioteca v4 core-utils: proporciona varias clases de utilidades
-    Biblioteca v4 core-ui: implementa una variedad de componentes relacionados con la interfaz de usuario.
-    v4 media-compat library: Backports partes de la infraestructura de medios de API 21.
-    Biblioteca de fragmentos v4: agrega soporte para fragmentos de Android.
+  * *v4 compat library*: wrappers de compatibilidad (clases que incluyen la palabra "Compat") para una serie de APIs de infraestructura básica.
+  * *Librería v4 core-utils*: proporciona varias clases de utilidades
+  * *Librería v4 core-ui*: implementa una variedad de componentes relacionados con la interfaz de usuario.
+  * *Librería v4 media-compat*: Partes de **backport** para la infraestructura de medios desde la API 21.
+  * *Librería de fragments v4*: agrega soporte para fragments de Android.
 
-biblioteca de soporte v7
+#### librería de soporte v7
 
-La biblioteca de soporte de v7 incluye tanto bibliotecas de compatibilidad como características adicionales.
+La librería de soporte de v7 incluye tanto librerías de compatibilidad como características adicionales.
 
-La biblioteca de soporte de v7 incluye todas las bibliotecas de soporte de v4, por lo que no tiene que agregarlas por separado. Se incluye una dependencia de la biblioteca de soporte de v7 en cada nuevo proyecto de Android Studio, y las nuevas actividades en su proyecto se extienden desde AppCompatActivity.
+La librería de soporte de v7 incluye todas las bibliotecas de soporte de v4, por lo que no tiene que agregarlas por separado. Se incluye una dependencia de la librería de soporte de v7 por defecto en cada nuevo proyecto de Android Studio, y las nuevas actividades en un proyecto se extienden desde **AppCompatActivity**.
 
 Las bibliotecas de soporte de v7 incluyen estos componentes específicos:
 
-    v7 appcompat library: agrega soporte para el patrón de diseño de la interfaz de usuario de la barra de aplicaciones y soporte para implementaciones de Material Design UI.
-    v7 cardview library: proporciona la clase CardView, una vista que le permite mostrar información dentro de las tarjetas.
-    v7 gridlayout library: incluye la clase GridLayout, que le permite organizar los elementos de la interfaz de usuario utilizando una cuadrícula de celdas rectangulares
-    v7 mediarouter library: proporciona MediaRouter y clases de medios relacionados que admiten Google Cast.
+   * **Librería v7 appcompat**: agrega soporte para el patrón de diseño de la interfaz de usuario de la barra de aplicaciones y soporte para implementaciones de Material Design UI.
+   * **Librería v7 cardview**: proporciona la clase **CardView**, una vista que permite mostrar información dentro de tarjetas.
+   * **Librería v7 gridlayout**: incluye la clase **GridLayout**, que le permite organizar los elementos de la interfaz de usuario utilizando una cuadrícula de celdas rectangulares
+   * **Librería v7 mediarouter**: proporciona MediaRouter y clases de medios relacionados que admiten Google Cast.
     v7 palette library: implementa la clase Palette, que le permite extraer colores prominentes de una imagen.
     v7 recyclerview library: proporciona la clase RecyclerView, una vista para mostrar de manera eficiente grandes conjuntos de datos al proporcionar una ventana limitada de elementos de datos.
     Biblioteca de preferencias v7: proporciona API para admitir objetos de preferencias en la configuración de la aplicación.
