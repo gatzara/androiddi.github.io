@@ -1,4 +1,4 @@
-## Construyendo la primera app
+## 1. Construyendo la primera app
 
 ### Layouts y recursos para la interfaz de usuario
 
