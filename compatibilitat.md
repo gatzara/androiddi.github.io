@@ -109,5 +109,90 @@ En Android Studio, utilizará el repositorio de soporte de Android (el repositor
 Es posible que ya tenga las librerías de soporte de Android descargadas e instaladas con Android Studio. Para verificar que tiene las librerías de soporte disponibles, siga estos pasos:
 
   1. En Android Studio, seleccione **Tools>Android>SDK Manager** o haga clic en el ícono del icono Administrador de SDK.![Android SDK Manager](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/3-3-c-the-android-support-library/ic_sdk_mgr.png)
+  2. Haga clic en la pestaña **SDK Tools** y expanda **Support Repository**, como se muestra en la figura siguiente.
+  ![Librería de soporte](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/3-3-c-the-android-support-library/sdk-manager.png)
+  3. Busque el **Android Support Repository** en la lista. Si aparece Instalado en la columna Estado, está todo configurado. Haga clic en Cancelar.
+  Si aparece No instalado o Actualización disponible, haga clic en la casilla junto a **Android Support Repository**. Debería aparecer un icono de descarga junto a la casilla de verificación. Haga clic en Aceptar.
+  4. Haga clic en Aceptar nuevamente y luego en Finalizar cuando se haya instalado el repositorio de soporte.
 
-     Haga clic en la pestaña Herramientas del SDK y expanda Soporte Repositorio, como se muestra en la figura a continuación.
+#### Encuentra una declaración de dependencia de la biblioteca
+
+Para proporcionar acceso a una biblioteca de soporte desde un proyecto, agregue esa librería a su archivo de compilación de Gradle como una dependencia. Las declaraciones de dependencia tienen un formato específico que incluye el nombre y el número de versión de la biblioteca.
+
+  1. Visite **Support Library Features** en **developer.android.com**.
+  2. Encuentre la librería que le interesa en esa página, por ejemplo, la librería de soporte de diseño para el soporte de Material Design.
+  3. Copie la declaración de dependencia que se muestra al final de la sección. Por ejemplo, la dependencia de la librería de soporte de diseño se ve así:
+> com.android.support:design:26.1.0
+
+El número de versión al final de la línea puede variar del que se muestra arriba. Se debe actualizar el número de versión cuando agregue la dependencia al archivo build.gradle expuesto en el siguiente paso.
+
+#### Agregue la dependencia a su archivo build.gradle
+
+Los scripts de Gradle para un proyecto gestionan cómo se construye su aplicación, incluida la especificación de las dependencias que tiene su aplicación en otras librerías. Para agregar una librería de soporte a un proyecto, modifique los archivos de compilación de Gradle para incluir la dependencia de la biblioteca.
+
+En Android Studio, asegúrese de que el panel Proyecto> Android esté abierto.
+
+  1. Expanda Gradle Scripts y abra el archivo **build.gradle** (Module:app).
+  Tenga en cuenta que build.gradle para el proyecto general (**build.gradle** (Project:app_name)) es un archivo diferente del build.gradle para el módulo de la aplicación.
+  2. Localice la sección de dependencias cerca del final del archivo.
+  3. La sección de dependencias para un nuevo proyecto ya incluye dependencias para varias librerías.
+  4. Agregue una dependencia para la librería de soporte que incluye la declaración que se vió en la tarea anterior. Por ejemplo, una dependencia completa en la librería de soporte de diseño se ve así:
+
+> implementation 'com.android.support:design:26.1.0'
+  1. Actualice el número de versión, si es necesario.
+  
+  Si el número de versión que especificó es inferior al número de versión de la biblioteca disponible actualmente, Android Studio le advierte que hay una versión actualizada disponible. ("hay disponible una versión más reciente de com.android.support:design"). Edite el número de versión a la versión actualizada o teclee **Alt-Enter** y seleccione **Cambiar a xx.xx.x** en el menú, donde xx.xx.x es la versión más actualizada disponible.
+  2. Haga clic en **Sync now** para sincronizar sus archivos de gradle actualizados con el proyecto, si se le solicita.
+
+#### Usando las API de la librería de soporte
+
+Todas las clases de la biblioteca de soporte están contenidas en los paquetes android.support. Por ejemplo, *android.support.v7.app.AppCompatActivity* es el nombre completo de la clase **AppCompatActivity**, desde donde se extienden todas sus actividades.
+
+Las clases de la librería de soporte que proporcionan soporte para las API de frameworks existentes normalmente tienen el mismo nombre que la clase de framework, pero se encuentran en los paquetes de clase **android.support**. Asegúrese de que cuando importe esas clases use el nombre de paquete correcto para la clase que le interesa. Por ejemplo, al aplicar la clase ActionBar, use uno de los siguientes:
+
+  * **android.support.v7.app.ActionBar** cuando se utiliza la librería de soporte.
+  * **android.app.ActionBar** cuando se desarrolla solo para API nivel 11 o superior.
+
+La biblioteca de soporte también incluye varias clases de View utilizadas en archivos de diseño XML. En el caso de los elementos de Vista (como CoordinatorLayout), siempre debe usar el nombre completo en el elemento XML para esa Vista:
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns: android = "http://schemas.android.com/apk/res/android"
+    android: layout_width = "match_parent"
+    android: layout_height = "match_parent"
+    Android: orientación = "vertical">
+</android.support.design.widget.CoordinatorLayout>
+
+
+### <a id="versiones"></a>Comprobando las versiones del sistema.
+
+Aunque la librería de soporte puede ayudar a implementar aplicaciones únicas que funcionan en las versiones de la plataforma Android, puede haber ocasiones en las que necesite verificar la versión de Android en la que se está ejecutando su aplicación y proporcionar el código correcto para esa versión.
+
+Android proporciona un código único para cada versión de plataforma en la clase de constantes de compilación. Use estos códigos dentro de su aplicación para probar la versión y asegurarse de que el código que depende de niveles de API más altos se ejecute solo cuando esas API estén disponibles en el sistema.
+
+    private void setUpActionBar () {
+       // Asegúrese de que estemos ejecutando en Honeycomb o superior para usar las API de ActionBar
+       if (Build.VERSION.SDK_INT> = Build.VERSION_CODES.HONEYCOMB) {
+        ActionBar actionBar = getActionBar ();
+        actionBar.setDisplayHomeAsUpEnabled (true);
+       } else {// haz otra cosa}
+    }
+
+### <a id="practicas"></a>Prácticas relacionadas 
+
+<p>La práctica relacionada es <a href="https://codelabs.developers.google.com/codelabs/android-training-support-libraries" target="_blank">3.3: Librerías de soporte</a>.</p>
+
+### <a id="aprende"></a>Aprende más
+<p>Android developer documentation:</p>
+<ul>
+<li><a href="https://developer.android.com/topic/libraries/support-library/" target="_blank">Android Support Library</a> (introduction)</li>
+<li><a href="https://developer.android.com/topic/libraries/support-library/setup.html" target="_blank">Support Library Setup</a></li>
+<li><a href="https://developer.android.com/topic/libraries/support-library/features.html" target="_blank">Support Library Features</a></li>
+<li><a href="https://developer.android.com/training/basics/supporting-devices/platforms.html" target="_blank">Supporting Different Platform Versions</a></li>
+<li><a href="https://developer.android.com/reference/packages.html" target="_blank">Package Index</a> (all API packages that start with android.support)</li>
+</ul>
+<p>Otros:</p>
+<ul>
+<li><a href="https://medium.com/androiddevelopers/picking-your-compilesdkversion-minsdkversion-targetsdkversion-a098a0341ebd" target="_blank">Picking your compileSdkVersion, minSdkVersion, and targetSdkVersion</a></li>
+<li><a href="http://martiancraft.com/blog/2015/06/android-support-library/" target="_blank">Understanding the Android Support Library</a></li>
+<li><a href="https://blog.egorand.me/all-the-things-compat/" target="_blank">All the Things Compat</a></li>
+</ul>
