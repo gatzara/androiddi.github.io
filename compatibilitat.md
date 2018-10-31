@@ -10,7 +10,7 @@
 
 En este capítulo, se explora la biblioteca de soporte de Android, que forma parte de las herramientas del SDK de Android. Sep uede usar la biblioteca de soporte de Android para obtener versiones compatibles con versiones anteriores de las nuevas funciones de Android ó más elementos de la interfaz de usuario (IU) no incluidos en el framework estándar de Android.
 
-### <a id="#acerca"></a>Acerca de la biblioteca de soporte de Android
+### <a id="acerca"></a>Acerca de la biblioteca de soporte de Android
 
 Las herramientas del SDK de Android incluyen una serie de librerías llamadas colectivamente la **Librería de soporte de Android**. Este paquete de librerías proporcionan varias características que no están integradas en el framework estándar de Android y proporciona compatibilidad con versiones anteriores para dispositivos más antiguos. Se debe incluir cualquiera de estas librerías en una aplicación para incorporar su funcionalidad.
 *Nota*: la librería de soporte de Android es un paquete diferente de la librería de soporte de testeo de Android. La librería de soporte de pruebas proporciona herramientas y API solo para los testeos, mientras que la librería de soporte más general proporciona características de todo tipo (pero no de prueba).
@@ -50,7 +50,7 @@ Además del número de versión real, el nombre de la propia librería de soport
 
 Todas las bibliotecas de soporte, incluidas las bibliotecas v4 y v7, requieren un SDK mínimo de API 9.
 
-### <a id="#librerias"></a> Librerías de soporte y características
+### <a id="librerias"></a> Librerías de soporte y características
 
 Esta sección describe las características importantes proporcionadas por las bibliotecas en la biblioteca de soporte de Android. Aprenderá sobre muchas de las funciones descritas en esta sección en otros capítulos.
 
@@ -60,11 +60,11 @@ Las librerías de soporte v4 incluyen el conjunto más grande de API en comparac
 
 Las librerías de soporte de v4 incluyen estos componentes específicos:
 
-  * *v4 compat library*: wrappers de compatibilidad (clases que incluyen la palabra "Compat") para una serie de APIs de infraestructura básica.
-  * *Librería v4 core-utils*: proporciona varias clases de utilidades
-  * *Librería v4 core-ui*: implementa una variedad de componentes relacionados con la interfaz de usuario.
-  * *Librería v4 media-compat*: Partes de **backport** para la infraestructura de medios desde la API 21.
-  * *Librería de fragments v4*: agrega soporte para fragments de Android.
+  * **v4 compat library**: wrappers de compatibilidad (clases que incluyen la palabra "Compat") para una serie de APIs de infraestructura básica.
+  * **Librería v4 core-utils**: proporciona varias clases de utilidades
+  * **Librería v4 core-ui**: implementa una variedad de componentes relacionados con la interfaz de usuario.
+  * **Librería v4 media-compat**: Partes de **backport** para la infraestructura de medios desde la API 21.
+  * **Librería de fragments v4**: agrega soporte para fragments de Android.
 
 #### librería de soporte v7
 
@@ -77,26 +77,37 @@ Las bibliotecas de soporte de v7 incluyen estos componentes específicos:
    * **Librería v7 appcompat**: agrega soporte para el patrón de diseño de la interfaz de usuario de la barra de aplicaciones y soporte para implementaciones de Material Design UI.
    * **Librería v7 cardview**: proporciona la clase **CardView**, una vista que permite mostrar información dentro de tarjetas.
    * **Librería v7 gridlayout**: incluye la clase **GridLayout**, que le permite organizar los elementos de la interfaz de usuario utilizando una cuadrícula de celdas rectangulares
-   * **Librería v7 mediarouter**: proporciona MediaRouter y clases de medios relacionados que admiten Google Cast.
-    v7 palette library: implementa la clase Palette, que le permite extraer colores prominentes de una imagen.
-    v7 recyclerview library: proporciona la clase RecyclerView, una vista para mostrar de manera eficiente grandes conjuntos de datos al proporcionar una ventana limitada de elementos de datos.
-    Biblioteca de preferencias v7: proporciona API para admitir objetos de preferencias en la configuración de la aplicación.
+   * **Librería v7 mediarouter**: proporciona **MediaRouter** y clases de medios relacionados que admiten Google Cast.
+   * **Librería v7 palette**: implementa la clase **Palette**, que le permite extraer colores prominentes de una imagen.
+   * **Librería v7 recyclerview**: proporciona la clase **RecyclerView**, una vista para mostrar de manera eficiente grandes conjuntos de datos al proporcionar una ventana limitada de elementos de datos.
+   * **Librería de preferencias v7**: proporciona API para admitir objetos de **preferencias** en la configuración de la aplicación.
 
-Otras bibliotecas
+#### Otras bibliotecas
 
-    Biblioteca de representación de v8: agrega compatibilidad con RenderScript, un marco para ejecutar tareas intensivas en computación con un alto rendimiento.
-    biblioteca de soporte v13: proporciona soporte para usar un fragmento con la clase FragmentCompat y clases de soporte de fragmentos adicionales.
-    Biblioteca de soporte de preferencias v14 y biblioteca de soporte de preferencias v17 para TV: proporciona API para agregar soporte para interfaces de preferencias en dispositivos móviles y TV.
-    Biblioteca leanback v17: proporciona API para admitir la creación de IU en dispositivos de TV.
-    Biblioteca de soporte de anotaciones: contiene API para admitir la adición de metadatos de anotación a sus aplicaciones.
-    Biblioteca de soporte de diseño: agrega soporte para varios componentes y patrones de Diseño de materiales, como cajones de navegación, botones de acción flotante (FAB), barras de aperitivo y pestañas.
-    Biblioteca de soporte de pestañas personalizadas: agrega soporte para agregar y administrar pestañas personalizadas en sus aplicaciones.
-    Biblioteca de soporte de porcentaje: le permite agregar y administrar dimensiones basadas en porcentaje en su aplicación.
-    Biblioteca de soporte de recomendaciones de aplicaciones para TV: proporciona API para agregar recomendaciones de contenido en su aplicación que se ejecuta en dispositivos de TV.
+  * **Librería de renderización de v8**: agrega compatibilidad con **RenderScript**, un framework para ejecutar tareas intensivas en computación con un alto rendimiento.
+  * **Librería de soporte v13**: proporciona soporte para usar un fragment con la clase **FragmentCompat** y clases de soporte de fragments adicionales.
+  * **Librería de soporte de preferencias v14 y librería de soporte de preferencias v17 para TV**: proporciona API para agregar soporte para interfaces de preferencias en dispositivos móviles y TV.
+  * **Librería leanback v17**: proporciona API para admitir la creación de Interfaces de Usuario en dispositivos de TV.
+  * **Librería de soporte de anotaciones**: contiene API para admitir la adición de metadatos de anotación a sus aplicaciones.
+  * **Librería de soporte de diseño**: agrega soporte para varios componentes y patrones de Material Design, como Navigation Drawers, botones flotantes (FAB), snack bars y pestañas.
+  * **Librería de soporte de pestañas personalizadas**: agrega soporte para agregar y administrar pestañas personalizadas en las aplicaciones.
+  * **Librería de soporte de porcentaje**: le permite agregar y administrar dimensiones basadas en porcentajes en su aplicación.
+  * **Librería de soporte de recomendaciones de aplicaciones para TV**: proporciona API para agregar recomendaciones de contenido en su aplicación que se ejecuta en dispositivos de TV.
 
-Configuración y uso de la biblioteca de soporte de Android
+### <a id="configuracion"></a>Configuración y uso de la biblioteca de soporte de Android
 
-El paquete de la biblioteca de soporte de Android es parte del SDK de Android y está disponible para descargarlo en el administrador del SDK de Android. Para configurar su proyecto para usar cualquiera de las bibliotecas de soporte, siga estos pasos:
+El paquete de la librería de soporte de Android es parte del SDK de Android y está disponible para descargarlo en el administrador del SDK de Android. Para configurar un proyecto para usar cualquiera de las librerías de soporte, siga estos pasos:
 
-    Descargue la biblioteca de soporte con el administrador de SDK de Android o verifique que las bibliotecas de soporte ya estén disponibles.
-    F
+  1. Descargue la librería de soporte con el administrador de SDK de Android o verifique que las librerías de soporte ya estén disponibles.
+  2. Encuentre la declaración de dependencia de la librería para la biblioteca de soporte en la que está interesado.
+  3. Agregue esa declaración de dependencia a la sección de dependencias de su archivo build.gradle (Module:app).
+
+#### Descarga la biblioteca de soporte
+
+En Android Studio, utilizará el repositorio de soporte de Android (el repositorio en el administrador de SDK para todas las librerías de soporte), para obtener acceso a la biblioteca desde su proyecto.
+
+Es posible que ya tenga las librerías de soporte de Android descargadas e instaladas con Android Studio. Para verificar que tiene las librerías de soporte disponibles, siga estos pasos:
+
+  1. En Android Studio, seleccione **Tools>Android>SDK Manager** o haga clic en el ícono del icono Administrador de SDK.![Android SDK Manager](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/3-3-c-the-android-support-library/ic_sdk_mgr.png)
+
+     Haga clic en la pestaña Herramientas del SDK y expanda Soporte Repositorio, como se muestra en la figura a continuación.
