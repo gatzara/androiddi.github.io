@@ -122,3 +122,56 @@ Las imágenes vectoriales de un icono estándar se redimensionan automáticament
   2. Elija **New>Vector Asset** para un icono que se redimensiona automáticamente para cada pantalla.
   3. El cuadro de diálogo **Vector Asset Studio** aparece para un vector activo. Haga clic en el botón de opción **Material Icon** y luego haga clic en el botón Elegir para elegir un icono de la especificación de **Material Design**. (Para obtener una descripción completa de este cuadro de diálogo, consulte Agregar gráficos vectoriales de densidad múltiple).
   4. Haga clic en Siguiente después de elegir un icono y haga clic en Finalizar para finalizar. El nombre del icono debería aparecer ahora en la carpeta app>res>drawable.
+
+#### Añadiendo el botón con texto e icono al diseño.
+
+Para crear un botón con texto y un ícono como se muestra en la figura a continuación, use un Button en su diseño XML. Agregue el atributo *android:drawableLeft* para dibujar el icono a la izquierda del texto del botón, como se muestra en la siguiente figura:
+
+> <Button
+>    android:layout_width="wrap_content"
+>    android:layout_height="wrap_content"
+>    android:text="@string/button_text"
+>    android:drawableLeft="@drawable/button_icon"
+>    <!-- more attributes ... -->
+> />
+
+![Botón con icono y texto](https://google-developer-training.github.io/android-developer-fundamentals-course-concepts-v2/images/4-1-c-buttons-and-clickable-images/alert_with_icon_raised_button.png)
+
+Creando un botón levantado con solo un icono
+
+Si el ícono se entiende universalmente, es posible que desee usarlo en lugar de texto.
+
+Para crear un botón elevado con solo un icono o una imagen (sin texto), use la clase ImageButton, que extiende la clase ImageView. Puede agregar un ImageButton a su diseño XML de la siguiente manera:
+
+<ImageButton
+    android: layout_width = "wrap_content"
+    android: layout_height = "wrap_content"
+    android: src = "@ drawable / button_icon"
+    <! - más atributos ... ->
+/>
+
+#### Cambiando el estilo y apariencia de los botones elevados.
+
+La forma más sencilla de mostrar un botón elevado más prominente es usar un color de fondo diferente para el botón. Puede especificar el atributo android:background con un recurso drawable o de color:
+
+> android:background="@color/colorPrimary"
+
+La apariencia de un botón, el color de fondo y la fuente, puede variar de un dispositivo a otro, porque los dispositivos de diferentes fabricantes a menudo tienen diferentes estilos predeterminados para los controles de entrada. Puede controlar exactamente el estilo de sus botones y otros controles de entrada utilizando un tema que aplique a toda su aplicación.
+
+Por ejemplo, para asegurarse de que todos los dispositivos que pueden ejecutar el tema Holo usarán el tema Holo para su aplicación, declare lo siguiente en el elemento <aplicación> del archivo AndroidManifest.xml:
+
+> android:theme ="@android:style/Theme.Holo"
+
+Después de agregar la declaración anterior, la aplicación se mostrará usando el tema.
+
+Las aplicaciones diseñadas para Android 4.0 y superiores también pueden usar la familia de temas públicos **DeviceDefault**. Los temas de DeviceDefault son alias para el aspecto y estilo nativos del dispositivo. La familia de temas DeviceDefault y la familia de estilo de widgets ofrecen formas para que los desarrolladores seleccionen el tema nativo del dispositivo con todas las personalizaciones intactas.
+
+Para las aplicaciones de Android que se ejecutan en 4.0 y posteriores, tiene las siguientes opciones:
+
+  * Use un tema, como uno de los temas de Holo, para que su aplicación tenga exactamente el mismo aspecto en todos los dispositivos con Android que ejecuten 4.0 o más nuevos. En este caso, el aspecto de la aplicación no cambia cuando se ejecuta en un dispositivo con un aspecto predeterminado diferente o un aspecto personalizado.
+  * Use uno de los temas de DeviceDefault para que su aplicación adquiera el aspecto de la máscara predeterminada del dispositivo.
+  No utilice un tema bajo riesgod de tener resultados impredecibles en algunos dispositivos.
+
+#### Diseño de botones planos
+
+Un botón plano, también conocido como botón de texto o botón sin bordes, es un botón de solo texto que se ve plano y no tiene una sombra. La principal ventaja de los botones planos es la simplicidad: un botón plano no distrae al usuario del contenido principal tanto como lo hace un botón elevado. Los botones planos son útiles para los diálogos que requieren la interacción del usuario, como se muestra en la siguiente figura. En este caso, se desea que el botón use la misma fuente y el mismo estilo que el texto circundante para mantener una apariencia coherente en todos los elementos del cuadro de diálogo.
