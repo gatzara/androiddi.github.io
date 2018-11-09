@@ -175,3 +175,38 @@ Para las aplicaciones de Android que se ejecutan en 4.0 y posteriores, tiene las
 #### Diseño de botones planos
 
 Un botón plano, también conocido como botón de texto o botón sin bordes, es un botón de solo texto que se ve plano y no tiene una sombra. La principal ventaja de los botones planos es la simplicidad: un botón plano no distrae al usuario del contenido principal tanto como lo hace un botón elevado. Los botones planos son útiles para los diálogos que requieren la interacción del usuario, como se muestra en la siguiente figura. En este caso, se desea que el botón use la misma fuente y el mismo estilo que el texto circundante para mantener una apariencia coherente en todos los elementos del cuadro de diálogo.
+
+### <a id="practica"></a>Contenido práctico
+p>TLa práctica relacionada con el tema es <a href="https://codelabs.developers.google.com/codelabs/android-training-clickable-images" target="_blank">4.1: Clickable images</a>.</p>
+### <a id="aprende"></a>Aprende más
+<p>Documentación Android Studio:</p>
+<ul>
+<li><a href="https://developer.android.com/studio/intro/index.html" target="_blank">Guía de Usuario deAndroid Studio</a> </li>
+<li><a href="http://developer.android.com/tools/help/image-asset-studio.html" target="_blank">Crear iconos con Image Asset Studio</a></li>
+</ul>
+<p>Documentación de desarrolladores de Android:</p>
+<ul>
+<li><a href="https://developer.android.com/guide/topics/ui/" target="_blank">User interface &amp; navigation</a>  </li>
+<li><a href="https://developer.android.com/studio/write/layout-editor.html" target="_blank">Build a UI with Layout Editor</a></li>
+<li><a href="https://developer.android.com/training/constraint-layout/index.html" target="_blank">Build a Responsive UI with <code>ConstraintLayout</code></a></li>
+<li><a href="http://developer.android.com/guide/topics/ui/declaring-layout.html" target="_blank">Layouts</a></li>
+<li><a href="http://developer.android.com/reference/android/view/View.html" target="_blank"><code>View</code></a></li>
+<li><a href="http://developer.android.com/reference/android/widget/Button.html" target="_blank"><code>Button</code></a></li>
+<li><a href="https://developer.android.com/reference/android/widget/ImageView.html" target="_blank"><code>ImageView</code></a></li>
+<li><a href="http://developer.android.com/reference/android/widget/TextView.html" target="_blank"><code>TextView</code></a></li>
+<li><a href="https://developer.android.com/guide/topics/ui/controls/button.html" target="_blank">Buttons</a></li>
+<li><a href="https://developer.android.com/guide/topics/ui/ui-events.html" target="_blank">Input events overview</a></li>
+<li><a href="http://developer.android.com/guide/topics/ui/themes.html" target="_blank">Styles and themes</a></li>
+<li><a href="https://developer.android.com/training/gestures/index.html" target="_blank">Use touch gestures</a></li>
+</ul>
+<p>Material Design spec:</p>
+<ul>
+<li><a href="https://material.google.com/components/buttons.html" target="_blank">Components - Buttons</a></li>
+<li><a href="https://material.io/design/interaction/gestures.html" target="_blank">Gestures design guide</a></li>
+</ul>
+<p>Other: </p>
+<ul>
+<li>Codelabs: <a href="https://codelabs.developers.google.com/codelabs/constraint-layout/index.html" target="_blank">Using <code>ConstraintLayout</code> to design your views</a></li>
+<li>Android Developers Blog: <a href="http://android-developers.blogspot.com/2012/01/holo-everywhere.html" target="_blank">Holo Everywhere</a></li>
+<li>Developer blog: <a href="http://android-developers.blogspot.com/2014/10/implementing-material-design-in-your.html" target="_blank">Implementing Material Design in Your Android app</a></li>
+</ul>
